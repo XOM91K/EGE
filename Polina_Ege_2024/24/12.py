@@ -1,0 +1,6 @@
+s = open(r'C:\Users\Zarif\Downloads\24 (4).txt').readline()
+s = s.replace('KL', '@')
+s = s.replace('LK', '@')
+s = s.split('@')
+print(s)
+print(len(max(s, key=len)) + 2)

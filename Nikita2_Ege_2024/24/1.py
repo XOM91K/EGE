@@ -1,0 +1,5 @@
+s = open('1.txt').readline()
+s = s.replace('B', 'E')
+s = s.replace('F', 'E')
+s = s.split('E')
+print(len(max(s, key=len)))

@@ -1,0 +1,7 @@
+s = open('7.txt').readline()
+s = s.replace('2', '1').replace('3', '1')
+s = s.replace('B', 'A').replace('C', 'A')
+s = s.replace('1A1', '%')
+s = s.replace('1', 'A')
+s = s.split('A')
+print(len(max(s, key=len)))

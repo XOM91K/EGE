@@ -1,0 +1,8 @@
+s = open('13.txt').readline()
+s = s.replace('ZX', '@')
+s = s.replace('ZY', '@')
+s = s.replace('X', '#')
+s = s.replace('Z', '#')
+s = s.replace('Y', '#')
+s = s.split('#')
+print(len(max(s, key=len)))

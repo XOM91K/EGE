@@ -1,0 +1,6 @@
+s = open('16.txt').readline()
+s = s.replace('XX', '@')
+s = s.replace('YY', '@')
+s = s.replace('ZZ', '@')
+s = s.split('@')
+print(len(max(s, key=len)))

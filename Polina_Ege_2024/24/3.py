@@ -1,0 +1,7 @@
+s = open('3.txt').readline()
+s = s.replace('AA', '#')
+s = s.replace('BB', '#')
+s = s.replace('CC', '#')
+s = s.split('#')
+print(max(s, key=len))
+print(len(max(s, key=len)) + 2)
