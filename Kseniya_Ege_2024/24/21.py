@@ -1,5 +1,0 @@
-s = open('21.txt').readline()
-s = s.replace('NPO', '#').replace('PNO', '#')
-s = s.replace('N', '!').replace('P', '!').replace('O', '!')
-s = s.split('!')
-print(len(max(s, key=len)))
