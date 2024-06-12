@@ -1,6 +1,0 @@
-a = int(input())
-b = int(input())
-c = int(input())
-mx = max(a, b, c)
-mx2 = a + b + c - mx - min(a, b, c)
-print(mx + mx2)

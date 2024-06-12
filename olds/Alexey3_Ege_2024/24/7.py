@@ -1,0 +1,8 @@
+s = open('7.txt').readline()
+s = s.replace('AB', '**')
+s = s.replace('CAC', '***')
+s = s.replace('A', '#')
+s = s.replace('B', '#')
+s = s.replace('C', '#')
+s = s.split('#')
+print(len(max(s, key=len)))

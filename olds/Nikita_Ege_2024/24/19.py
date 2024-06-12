@@ -1,0 +1,6 @@
+s = open(r'C:\Users\Zarif\Downloads\24.txt').readline()
+s = s.replace('FSWY', '#')
+s = s.replace('SWY', '@')
+s = s.replace('FSW', '$')
+s = s.replace('WY', '&')
+s = s.replace('FS', '!')
