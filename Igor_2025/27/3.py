@@ -13,10 +13,3 @@ while i < j:
         ct += (len(l) - j - 1)
 ct_right = ((len(l) - j - 1) * (len(l) - j - 2)) // 2
 print(ct + ct_right)
-# ct = 0
-# print(l)
-# for i in range(len(l) - 1):
-#     for j in range(i + 1, len(l)):
-#         if l[i] + l[j] >= s:
-#             ct += 1
-# print(ct)

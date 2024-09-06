@@ -1,0 +1,10 @@
+for N in range(1, 1000):
+    R = bin(N)[2:]
+    # 10101010101010
+    if R.count('1') % 2 == 1:
+        R += '11'
+    else:
+        R = '11' + R
+    R = int(R, 2)
+    if R > 102:
+        print(N)
