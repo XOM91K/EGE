@@ -5,8 +5,6 @@ data = l
 # Инициализация параметров
 k = 3
 centers = [data[0], data[1], data[2]]  # Начальные центры (первые две точки)
-
-
 def assign_clusters(data, centers):
     labels = []
     for point in data:
