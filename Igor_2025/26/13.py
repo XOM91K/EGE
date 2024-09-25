@@ -9,7 +9,6 @@ for x in l:
             for y in range(mn_ves + 1, x):
                 nz.append(y)
         mn_ves += x
-
 nz2 = nz.copy()
 
 for item in nz:
