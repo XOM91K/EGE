@@ -1,17 +1,10 @@
 l = sorted([int(x) for x in open('13.txt')])
-nz = []
-mn_ves = l[0]
-print(mn_ves)
-l = l[1:]
+sml = sum(l)
+ms = [False] * (sml + 1)
+ms[0] = True
 for x in l:
-    if mn_ves <= x:
-        if abs(x - mn_ves) > 1:
-            for y in range(mn_ves + 1, x):
-                nz.append(y)
-        mn_ves += x
-nz2 = nz.copy()
-
-for item in nz:
-    if item + l[-1] < mn_ves:
-        nz2.append(item + l[-1])
-print(len(nz2), max(nz2))
+    for y in range(len(ms) - 1, -1, -1):
+        ms[x] = ms[y] or ms[y - x]
+print(ms)
+print([x for x in range(len(ms))])
+print(sml)
