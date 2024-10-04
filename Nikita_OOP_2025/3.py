@@ -12,12 +12,14 @@ class Bell:
         g = ''
         for y in self.sl1:
             g += y + ', '
-        if len(d) == 0:
-            print(g[:-2])
-        elif len(d) > 0 and len(g) > 0:
+        if len(d) > 0 and len(g) > 0:
             print(d + '; ' + g[:-2])
         elif len(g) == 0 and len(d) > 0:
             print(d)
+        elif len(g) == 0 and len(d) == 0:
+            print('-')
+        elif len(d) == 0:
+            print(g[:-2])
 
 
 class BellTower:
@@ -50,7 +52,10 @@ class BigBell(Bell):
 
 
 class LittleBell(Bell):
-    def sound(self):
+    def __init__(self, *args, **kwargs):
+        self.sl1 = args
+        self.sl = sorted(kwargs.items())
+    def sound(self, ):
         print('ding')
 
 
