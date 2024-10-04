@@ -14,8 +14,10 @@ class Bell:
             g += y + ', '
         if len(d) == 0:
             print(g[:-2])
-        else:
+        elif len(d) > 0 and len(g) > 0:
             print(d + '; ' + g[:-2])
+        elif len(g) == 0 and len(d) > 0:
+            print(d)
 
 
 class BellTower:
@@ -52,4 +54,6 @@ class LittleBell(Bell):
         print('ding')
 
 
-LittleBell("медный", "волк", "раз", нота="ля", зеленый='бе', красный='до').print_info()
+Bell("бронзовый").print_info()
+LittleBell("медный", нота="ля").print_info()
+BigBell(название="Корноухий", вес="1275 пудов").print_info()
