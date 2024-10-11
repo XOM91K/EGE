@@ -92,15 +92,3 @@ if __name__ == "__main__":
         session.hall.print_layout()
     else:
         print("Доступных мест не найдено")
-
-
-# stderr:
-# mv: '/temp/compiling/solution.py' and 'solution.py' are the same file
-# solution.py:52:52: E226 missing whitespace around arithmetic operator
-# solution.py:52:67: E226 missing whitespace around arithmetic operator
-# solution.py:57:14: E226 missing whitespace around arithmetic operator
-# solution.py:57:37: E226 missing whitespace around arithmetic operator
-# solution.py:77:34: F541 f-string is missing placeholders
-# solution.py:79:23: F541 f-string is missing placeholders
-# Код не соответствует стандарту PEP8
-# или в нем есть синтаксические ошибки
