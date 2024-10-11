@@ -20,7 +20,8 @@ class Hall:
             print(row_layout)
 
     def has_free_seats(self):
-        return any(seat.is_occupied is False for row in self.seats for seat in row)
+        return any(seat.is_occupied is False for
+                   row in self.seats for seat in row)
 
 
 class Session:
