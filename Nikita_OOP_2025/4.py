@@ -25,7 +25,6 @@ class Note:
 class Melody:
     def __init__(self, notes=[]):
         self.notes = notes.copy()
-        self.notes2 = notes.copy()
 
     def __str__(self):
         return ', '.join([str(i) for i in self.notes]).capitalize()
@@ -34,37 +33,27 @@ class Melody:
         return len(self.notes)
 
     def __rshift__(self, other):
-        mel = self.notes.copy()
-        for i in range(len(mel)):
-            if mel[i].long_pitch:
-                if mel[-1].long_pitch:
-                    if LONG_PITCHES.index(str(mel[-1])) + other >= len(LONG_PITCHES):
-                        return self.copy()
-                mel[i] = Note(LONG_PITCHES[LONG_PITCHES.index(str(mel[i])) + other], True)
-            else:
-                if not(mel[-1].long_pitch):
-                    if PITCHES.index(str(mel[-1])) + other >= len(PITCHES):
-                        return self.copy()
-                mel[i] = Note(PITCHES[PITCHES.index(str(mel[i])) + other])
-        return Melody(mel)
+        return self.sm(other)
 
     def __lshift__(self, other):
-        mel = self.notes.copy()
-        for i in range(len(mel)):
-            if mel[i].long_pitch:
-                if mel[0].long_pitch:
-                    if LONG_PITCHES.index(str(mel[0])) - other < 0:
-                        return self.copy()
-                mel[i] = Note(LONG_PITCHES[LONG_PITCHES.index(str(mel[i])) - other], True)
-            else:
-                if not(mel[0].long_pitch):
-                    if PITCHES.index(str(mel[0])) - other < 0:
-                        return self.copy()
-                mel[i] = Note(PITCHES[PITCHES.index(str(mel[i])) - other])
-        return Melody(mel)
+        return self.sm(-other)
+
+    def sm(self, shift):
+        new_notes = []
+        for note in self.notes:
+            if note.note not in PITCHES:
+                return self.copy()
+            ind = PITCHES.index(note.note)
+            new_ind = ind + shift
+            if not (0 <= new_ind < N):
+                return self.copy()
+            new_pitch = PITCHES[new_ind]
+            new_notes.append(Note(new_pitch, note.long_pitch))
+        return Melody(new_notes)
 
     def copy(self):
         return Melody(self.notes.copy())
+
     def append(self, note):
         self.notes.append(note)
 
