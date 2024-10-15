@@ -25,25 +25,6 @@ class Point:
     def __repr__(self):
         return f"Point('{self.name}', {self.x},{self.y})"
 
-    def __eq__(self, other):
-        return (self.name, self.x, self.y) == (other.name, other.x, other.y)
-
-    def __lt__(self, other):
-        return (self.name, self.x, self.y) < (other.name, other.x, other.y)
-
-    def __gt__(self, other):
-        return (self.name, self.x, self.y) > (other.name, other.x, other.y)
-
-    def __le__(self, other):
-        return (self.name, self.x, self.y) <= (other.name, other.x, other.y)
-
-    def __ge__(self, other):
-        return (self.name, self.x, self.y) >= (other.name, other.x, other.y)
-
-    def __ne__(self, other):
-        return (self.name, self.x, self.y) != (other.name, other.x, other.y)
-
-
 class CheckMark(Point):
     def __init__(self, pt1, pt2, pt3):
         self.pt1 = pt1
@@ -69,18 +50,18 @@ class CheckMark(Point):
         return True
 
 
-# p_A = Point('A', 1, 2)
-# p_B = Point('B', 0, 1)
-# p_C = Point('C', -1, 2)
-# p_D = Point('D', 2, 2)
-# p_E = Point('E', 2, 0)
-# p_F = Point('F', 2, -1)
-# cm_ABC = CheckMark(p_A, p_B, p_C)
-# cm_DEF = CheckMark(p_D, p_E, p_F)
-# cm_ABB = CheckMark(p_A, p_B, p_B)
-# print(cm_ABC, bool(cm_ABC))
-# print(cm_DEF, bool(cm_DEF))
-# print(cm_ABB, bool(cm_ABB))
+p_A = Point('A', 1, 2)
+p_B = Point('B', 0, 1)
+p_C = Point('C', -1, 2)
+p_D = Point('D', 2, 2)
+p_E = Point('E', 2, 0)
+p_F = Point('F', 2, -1)
+cm_ABC = CheckMark(p_A, p_B, p_C)
+cm_DEF = CheckMark(p_D, p_E, p_F)
+cm_ABB = CheckMark(p_A, p_B, p_B)
+print(cm_ABC, bool(cm_ABC))
+print(cm_DEF, bool(cm_DEF))
+print(cm_ABB, bool(cm_ABB))
 
 # p_A1 = Point('A', 1, 2)
 # p_A2 = Point('A', 2, 1)
