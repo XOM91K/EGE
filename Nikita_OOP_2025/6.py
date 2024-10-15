@@ -17,19 +17,37 @@ class Point:
         return f"{self.name}({self.x}, {self.y})"
 
     def __invert__(self):
-        return Point(self.name, self.y, self.x)
+        return Point(self.name, self.x, self.y)
 
     def __repr__(self):
         return f"Point('{self.name}', {self.x}, {self.y})"
 
-    def __eq__(self, other): # ==
-        return (self.name, self.y, self.x) == (other.name, other.y, other.x)
+    def __eq__(self, other):
+        return (self.name, self.x, self.y) == (other.name, other.x, other.y)
 
-    def __lt__(self, other): # <
-        return (self.name, self.y, self.x) < (other.name, other.y, other.x)
+    def __lt__(self, other):
+        return (self.name, self.x, self.y) < (other.name, other.x, other.y)
 
-p_A1 = Point('A', 1, 1)
-p_A2 = Point('A', 1, 1)
-p_B1 = Point('B', 2, 3)
-p_B2 = Point('B', 2, 3)
-print(p_A1 == p_A2)
+    def __gt__(self, other):
+        return (self.name, self.x, self.y) > (other.name, other.x, other.y)
+
+    def __le__(self, other):
+        return (self.name, self.x, self.y) <= (other.name, other.x, other.y)
+
+    def __ge__(self, other):
+        return (self.name, self.x, self.y) >= (other.name, other.x, other.y)
+
+    def __ne__(self, other):
+        return (self.name, self.x, self.y) != (other.name, other.x, other.y)
+
+
+# p_A1 = Point('A', 1, 2)
+# p_A2 = Point('A', 2, 1)
+# p_B1 = Point('B', 2, 3)
+# p_B2 = Point('B', 2, 3)
+# print(p_A1 == p_A2, p_B1 == p_B2)
+# print(p_A1 != p_A2, p_B1 != p_B2)
+# print(p_A1 < p_A2, p_B1 > p_B2)  #
+# print(p_A1 >= p_A2, p_B1 <= p_B2)  #
+# print(max(p_A1, p_B2, p_A2, p_B2))
+# print(min(p_A1, p_B2, p_A2, p_B2))
