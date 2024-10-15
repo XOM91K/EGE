@@ -43,7 +43,7 @@ class CheckMark(Point):
     def __eq__(self, other):
         ops1 = (self.pt1, self.pt2, self.pt3) == (other.pt1, other.pt2, other.pt3)
         ops2 = (self.pt1, self.pt2, self.pt3) == (other.pt3, other.pt2, other.pt1)
-        return ops1 == ops2
+        return ops1 or ops2
 
     def __bool__(self):
         string = f'{str(self.pt1)} {str(self.pt2)} {str(self.pt3)}'
