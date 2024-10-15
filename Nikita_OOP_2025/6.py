@@ -62,7 +62,9 @@ class CheckMark(Point):
         m = [[int(g) for g in t] for t in m]
         if m[0] == m[1] or m[1] == m[2] or m[0] == m[2]:
             return False
-        if (m[0][0] - m[2][0]) * (m[1][1] - m[2][1]) - (m[1][0] - m[2][0]) * (m[0][1] - m[2][1]) == 0:
+        op1 = (m[0][0] - m[2][0]) * (m[1][1] - m[2][1])
+        op2 = (m[1][0] - m[2][0]) * (m[0][1] - m[2][1])
+        if op1 - op2 == 0:
             return False
         return True
 
