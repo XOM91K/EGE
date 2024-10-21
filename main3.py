@@ -1,15 +1,5 @@
-def reverse_duga(s, l, r):
-    n = len(s)
-    if l <= r:
-        return s[:l-1] + s[l-1:r][::-1] + s[r:]
-    else:
-        return s[:r - 1] + s[l - 1] + s[r:l - 1] + s[r - 1] + s[l + 1:]
+import re
+text = open('24.txt').readline()
+match = re.findall(r"[A-WZ]*X[A-WZ]*Y[A-WZ]*|[A-WZ]*Y[A-WZ]*X[A-WZ]*", text)
+print(len(max(match, key=len)))
 
-# Пример использования функции
-initial_string = "purest"
-operations = [(3, 2), (1, 1)]
-
-for l, r in operations:
-    initial_string = reverse_duga(initial_string, l, r)
-
-print(initial_string)  # Вывод: oscar
