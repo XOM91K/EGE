@@ -1,0 +1,14 @@
+for n in range(1,10000):
+    s = '>2' + '12'*n + '<'
+    while '>2<' not in s:
+        if '>1' in s:
+            s = s.replace('>1', '>2', 1)
+        if '>21' in s:
+            s = s.replace('>21', '1>', 1)
+        if '12<' in s:
+            s = s.replace('12<', '1<2', 1)
+        if '1<' in s:
+            s = s.replace('1<', '<2', 1)
+    if s.count('1') + s.count('2')*2 > 103:
+        print(n)
+        break
