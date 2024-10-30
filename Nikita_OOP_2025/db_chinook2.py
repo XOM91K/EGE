@@ -12,5 +12,6 @@ with sqlite3.connect('Chinook_Sqlite.sqlite') as con:
         nameTrack = cur.fetchall()
         nameTrack = [g[0] for g in nameTrack]
         name_Track_sets.extend(nameTrack)
+    name_Track_sets = sorted(name_Track_sets, key=lambda d: (d[0]))
     for x in name_Track_sets:
         print(x)
