@@ -1,0 +1,16 @@
+boy.bmp
+mario.bmp
+----------
+Summary: 3 MB
+
+input.txt
+output.txt
+temp.txt
+----------
+Summary: 8 KB
+
+scratch.zip
+data.zip
+----------
+Summary: 6 MB
+

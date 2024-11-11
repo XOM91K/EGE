@@ -1,15 +1,14 @@
-def tr(a, b, c):
-    l = sorted([a, b, c])
-    if l[-1] < l[0] + l[1]:
-        return 1
-    return 0
-
-
-for A in range(1, 1_000):
-    can = True
-    for x in range(1, 1000):
-        if not ((tr(x, 11, 16) == (not (max(x, 5) > 10))) and (tr(4, A, x))) == 0:
-            can = False
-            break
-    if can:
-        print(A)
+for n in range(154, 1000):
+    s = bin(n)[2:] # перевод в двоичную систему
+    s = str(s)
+    for i in range(3):
+        if s.count("1") == s.count("0"):
+            s += s[-1]
+        elif s.count("1") > s.count("0"):
+            s += "0"
+        else:
+            s += "1"
+    r = int(s, 2) # перевод в десятичную систему
+    if r % 7 == 0:
+        print(n)
+        break
