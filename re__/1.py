@@ -1,6 +1,4 @@
 import re
-s = ''.join(open('1.txt').readlines())
-m = re.findall(r"Оборудование: (.+)?\n", s)
-for x in m:
-    print(x)
+s = "(Я    ) вот ( вышел) позже ( на ) ( улицу)"
+m = re.findall(r"\(.+?\)",   s) #asda
 print(m)
