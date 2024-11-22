@@ -30,10 +30,12 @@ class ShoppingCart:
         if product in self.items:
             self.items[product] -= 1
             product.stock += 1
+        if product not in self.items:
+            raise IndexError(f"Товара {product.name} нет корзине")
         if self.items[product] == 0:
             del self.items[product]
         else:
-            print(f"Товар '{product.name}' не находится  в корзине!")
+            print(f"Товар '{product.name}' был удалён из корзины.")
         return self
     def __len__(self):
         return len(self.items)
@@ -44,10 +46,10 @@ class ShoppingCart:
         return (product, self.items[product])
     def total_price(self):
         return sum(product.price * q for product, q in self.items.items())
-t1 = Product("Книга сказки", 750, 3)
-shopc = ShoppingCart()
-shopc += t1
-shopc += t1
-shopc -= t1
-print(shopc)
+# t1 = Product("Книга сказки", 750, 3)
+# shopc = ShoppingCart()
+# shopc += t1
+# shopc += t1
+# shopc -= t1
+# print(shopc)
 

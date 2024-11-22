@@ -67,3 +67,39 @@
 # print(a.upper())
 # print(a.lower())
 # print(a.title())
+
+
+# s = 'СОЛНЫШКОФЫВФЫВФЫВФЫВФЫВФЫВФЫВФЫВЫЫВЫФВЁ'
+# #Взятие элемента по индексу
+# print(s[1])
+# print(s[4])
+# print(s[7])
+# print(s[-1])
+# print(s[-4])
+
+#Срезы
+# s = 'СОЛНЫШКО'
+# print(s[0] + s[1] + s[2])
+# print(s[-3] + s[-2] + s[-1])
+# s1 = 'СОЛНЫШКОГУСЬЛЕБЕДЬНОРКААПЕЛЬСИНГОРКАЯБЛОКО'
+# s1[start_index:finish_index:step]
+# print(s1[::-1])
+# print(s1[0:12])
+# print(s1[0:12:2])
+# print(s1[:5])
+# print(s1[5:])
+# Ещё известные функции
+
+# Типа типа коллекции
+#1. Списки - list
+# l = [33, 44, 12, 22, 8]
+#print(l[0] + l[1] + l[2] + l[3] + l[4])
+# print(sum(l))
+# print(max(l))
+# print(min(l))
+# print(sorted(l)[::-1])
+# print(len(l)) #length
+# print(l[1] + l[-1])
+
+# c = '1011'
+# print(c[1])

@@ -1,0 +1,18 @@
+def g(s, p):
+    if s >= 435 and p == 2:
+        return 1
+    elif s < 435 and p == 2:
+        return 0
+    elif s >= 435 and p < 2:
+        return 0
+    # У соперника ходы через "or" - если он делает неудачный ход
+    # У соперника ходы через "and" - если он делает любой (независимый) ход
+    # У нашего игрока ходы всегда через "or"
+    if p % 2 == 0:
+        return g(s + 5, p + 1) and g(s * 3, p + 1)
+    else:
+        return g(s + 5, p + 1) or g(s * 3, p + 1)
+for x in range(1, 435):
+    if g(x, 0):
+        print(x)
+#140
