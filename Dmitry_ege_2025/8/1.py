@@ -1,5 +1,5 @@
 import itertools
-for x in itertools.permutations('НОЖИ', 3):
+for x in itertools.permutations('НОЖИ', 4):
     x = ''.join(x)
     print(x)
 
