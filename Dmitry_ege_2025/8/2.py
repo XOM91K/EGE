@@ -19,3 +19,5 @@ print(ct)
 # s = 'ГОРУБШКА'
 # if 'РУБ' not in s:
 #     print('Нету')
+s = 'abracadabra(*ASDB*(D^@*(V^@D*&d6827dv1td8712d2178d21c5d21782c5s217s65&^SA$S%^$XW^%XS^%@S@$S%^!@S@!B*&S@*S@S@!*&S(!@V^S!@*&S@!S*&@!CS%@!S*C@%S&@S^%@S&*@^!S@%!S&^@!CSC$@!S^&@S$!@X^&SX@$S@^S*&@VS%@B^!N*S(&M)@_!IS@!NSU)(@*B(S@VS^*@SC@%(S&$*@X^SC@%V&S(B*@)NS_*@*SN&*@!^S&(%VC^*@%SX&C@!*VS&(B^*)&N'
+print(len(set(s)), len(s)) #возвращает уникальные символы

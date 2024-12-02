@@ -3,11 +3,11 @@
 # Ваня когда походил, он делает чётные p
 # Петя когда походил, он делает нечётные p
 def g(s, p):
-    if s >= 58 and p == 2:
+    if s >= 58 and (p == 2 or p == 4):
         return 1
-    elif s < 58 and p == 2:
+    elif s < 58 and p == 4:
         return 0
-    elif s >= 58 and p < 2:
+    elif s >= 58 and p < 4:
         return 0
     if p % 2 == 0:
         return g(s + 4, p + 1) and g(s + 1, p + 1) and g(s * 2, p + 1)
