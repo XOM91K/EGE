@@ -19,4 +19,3 @@ def is_prime(d):
             return False
     return d > 1
 print(is_prime(d))
-print(is_prime(1))

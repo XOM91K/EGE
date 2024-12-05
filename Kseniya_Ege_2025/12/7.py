@@ -9,3 +9,6 @@ for n in range(1, 100):
             s = s.replace('>0', '1>', 1)
     if (s.count('1') + s.count('2') * 2) == 68:
         print(n)
+
+# print(d.count('1') + d.count('2') * 2 + d.count('3') * 3 + d.count('4') * 4 + d.count('5') * 5 + d.count('6') * 6 + d.count('7') * 7 + d.count('8') * 8 + d.count('9') * 9)
+# print(sum(map(int, d)))

@@ -1,5 +1,7 @@
-import re
-text = open('24.txt').readline()
-match = re.findall(r"[A-WZ]*X[A-WZ]*Y[A-WZ]*|[A-WZ]*Y[A-WZ]*X[A-WZ]*", text)
-print(len(max(match, key=len)))
-
+from itertools import product
+count = 0
+for s in product("0123456789ABC", repeat = 6):
+    if s.count("2") == 1 and s[0] != "0":
+        if s.count("A") + s.count("B") + s.count("C")<=4:
+            count += 1
+print(count)
