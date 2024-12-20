@@ -5,5 +5,6 @@ for p in product(letters, repeat=5):
     p = ''.join(p)
     if p.count('Е') + p.count('И') != 0 and (p.count('Е') + p.count('И')) % 2 == 0:
         if p.count('Й') <= 2:
+            print(p, ct)
             ct += 1
 print(ct)
