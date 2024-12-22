@@ -1,4 +1,6 @@
 import itertools
+#from itertools import *
+
 #iteration tools
 # permutations - перестановки
 n = 0
