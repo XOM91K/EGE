@@ -26,6 +26,10 @@
 
 #Функции
 #days = [11, 12, 11, 8, -9, -9, 5, 5]
+
+# ch = [1, 2, 3, 1, 2] #как найти сумму цифр
+# print(sum(map(int, str(214129047214901274124127492146124912846219842164))))
+
 # print(len(days)) #length
 # print(sum(days))
 # print(max(days))
@@ -38,3 +42,8 @@
 # for x in range(100000000):
 #     days.append(random.randint(-20, 35))
 # print(sum(days) / len(days))
+
+# d = '1290371209'
+# print(list(map(lambda d: str(int(d) ** 2) + '999666', d)))
+# d = '1290371209'
+# print(sum((map(int, d))))

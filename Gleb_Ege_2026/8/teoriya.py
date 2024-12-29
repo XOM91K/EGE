@@ -60,5 +60,7 @@ import itertools # iteration tools
 
 # numbers = [1, 2, 3]
 # dumbers = (1, 2, 3)
+# rumbers = {1, 2, 3, 3}
 # print(numbers, numbers.__sizeof__())
 # print(dumbers, dumbers.__sizeof__())
+# print(rumbers, rumbers.__sizeof__())
