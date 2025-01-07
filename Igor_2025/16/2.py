@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(100000)
 def F(n):
-    if n < 3:
+    if n == 1:
         return 3
     if n >= 3:
         return 2 * n + 5 + F(n - 2)

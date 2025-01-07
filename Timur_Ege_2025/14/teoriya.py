@@ -16,3 +16,5 @@ print(set(t))
 print(max(t))
 print(min(t))
 print(sorted(t))
+
+print(int('1209371', 36))
