@@ -7,6 +7,6 @@ for n in range(4, 10000):
             s = s.replace('322', '21', 1)
         if '222' in s:
             s = s.replace('222', '3', 1)
-    if sum(map(int, str(s))) == 15:
+    if sum(map(int, s)) == 15:
         print(n)
-        exit()
+        break

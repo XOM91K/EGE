@@ -1,4 +1,7 @@
 l = [int(x) for x in open('1.txt')]
+# l = open(r'C:\Users\Zarif\Downloads\153_1.txt')
+# print('asdas\nasd')
+#print(l)
 sr = sum(l) / len(l)
 ct = 0
 mn = []
