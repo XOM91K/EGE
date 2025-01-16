@@ -1,4 +1,5 @@
-l = [int(x) for x in open('1.txt')]
+l = [int(x) for x in open(r'C:\Users\Zarif\PycharmProjects\EGE\Egor_Ege_2025\17\1.txt')]
+#print('asdsda\nasddsada')
 sr = sum(l) / len(l)
 ct = 0
 mn = 10 ** 10
