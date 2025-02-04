@@ -1,5 +1,8 @@
-l = [[int(d) for d in x.split()] for x in open('5.txt')]
+l = [sorted([int(d) for d in x.split()]) for x in open('5.txt')]
 ct = 0
 for x in l:
     if len(set(x)) == 6:
-        print(x)
+        if (x[0] + x[-1]) / 2 < (x[1] + x[2] + x[3] + x[4]) / 4:
+            print(x)
+            ct += 1
+print(ct)
