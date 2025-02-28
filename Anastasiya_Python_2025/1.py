@@ -67,8 +67,94 @@
 # print(int(s) + 2)
 #
 # d = 100
-# print(str(d) + '2')
-# s = input() # 1450
-# print(int(s[0]) + int(s[1]) + int(s[2]) + int(s[3]))
-# s = input()
-# print(int(s[0]) * int(s[1]) * int(s[2]) * int(s[3]))
+#print(str(d) + '2')
+#s = input() # 1450
+#print(int(s[0]) + int(s[1]) + int(s[2]) + int(s[3]))
+#s = input()
+#print(int(s[0]) * int(s[1]) * int(s[2]) * int(s[3]))
+
+#цикл for перебирает элементы
+# d = range(1, 1000)
+# #range - задает математическую последовательность
+# print(list(d))
+
+# for x in range(2, 1000, 2):
+#     print(x, end=" ")
+# d = 'СОЛНЫШКО'
+# print()
+# for x in d:
+#     print(x, end=" ")
+# d = '11223923812621837632873235812321532132153982173512381235'
+# sm = 0
+# for x in d:
+#     sm += int(x)
+# print(sm)
+#print(2 + '2')
+# c = 100
+# #c = c + 5
+# c += 5
+# print(c)
+# s = 'РОМ'
+# s += 'А' + s
+# print(s)
+# d = 7
+# d //= 2
+# print(d)
+# d = 80
+# d *= 2
+# print(d)
+# d -= 20
+# print(d)
+# // + - * /  **   %
+#print(24 % 4)
+# d = 8
+# d **= 2
+# print(d)
+
+
+
+# d = 11223923812621837632873235812321532132153982173512381235
+# sm = 0
+# for x in str(d):
+#     sm += int(x)
+# print(sm)
+# for x in range(100):
+#     print('Привет')
+
+
+#while - цикл с условием
+# d = 5
+# while d > 0:
+#     print('Привет')
+#     d -= 1
+# while True:
+#     print('Привет')
+
+#Пользователь вводит числа. Мы должны найти сумму этих чисел
+#Пользователь вводит их, до тех пор не введет 0
+# a = -1
+# sm = 0
+# while a != 0:
+#     a = int(input())
+#     sm += a
+# print(sm)
+# d = 102
+# if d % 2 == 0:
+#     print('Число чётное')
+# else:
+#     print('Число нечётное')
+# d = 8175
+# #делится на 3 и на 5
+# if d % 3 == 0 and d % 5 == 0:
+#     print('Да')
+#d = 108
+# if d > 109 and d > 107:
+#     print('Да')
+# if d > 109 or d > 107:
+#     print('Да')
+sm1 = 344
+sm2 = 467
+if (str(sm1)[-1] == '3' and str(sm2)[-1] != '3') or (str(sm1)[-1] != '3' and str(sm2)[-1] == '3'):
+    print('Да')
+else:
+    print('Нет')
