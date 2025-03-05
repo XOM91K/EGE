@@ -152,9 +152,62 @@
 #     print('Да')
 # if d > 109 or d > 107:
 #     print('Да')
-sm1 = 344
-sm2 = 467
-if (str(sm1)[-1] == '3' and str(sm2)[-1] != '3') or (str(sm1)[-1] != '3' and str(sm2)[-1] == '3'):
-    print('Да')
-else:
-    print('Нет')
+# sm1 = 344
+# sm2 = 467
+# if (str(sm1)[-1] == '3' and str(sm2)[-1] != '3') or (str(sm1)[-1] != '3' and str(sm2)[-1] == '3'):
+#     print('Да')
+# else:
+#     print('Нет')
+
+#Списки
+#s = '123'
+#print(s[1])
+# l = [2, 3, 4, 100, -1500, 'Hello', 'Privet Kak dela?', 123]
+# print(l[5], l[2], l[7])
+#l = [3, 4, 10, -12]
+#Функции
+# print(len(l)) #выводит длину списка (кол-во элементов в списке)
+# print(max(l)) #выводит максимальный элемент
+# print(min(l)) #выводит минимальный элемент в сптске
+# print(sum(l))
+# print(sorted(l))
+# print(l)
+# l = sorted(l)
+# print(l)
+#Методы
+# l = [3, 4, 10, -12, 20, 20, 3, 3, 1, 50]
+# l.remove(-12)
+# l.remove(20)
+# l.insert(4, 90)
+# l.sort(reverse=True)
+# #l = l[::-1]
+# #l.clear()
+# print(l)
+# l.pop(3)
+# print(l)
+
+
+# l = [1, 3, 2]
+# print(sorted(l, reverse=True))
+
+# print(l.count(20)) #count - считает кол-во элементов в списке
+# print(l.index(-12)) #возвращает индекс элемента
+# l.append(100)
+# print(l)
+# l.append(55)
+# print(l)
+
+# [1, 2] list
+# 123 int
+# 'hello' str
+# {3, 3, 4} set
+
+
+# Множества (set)
+# s = {1, 2, 2, 4, 5, 10, -10, 10}
+# s.add(50)
+# print(s)
+#print(s[2])
+# s = 'abracadabra'
+# print(set(s))
+# print(len(set(s)))
