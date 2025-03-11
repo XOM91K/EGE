@@ -1,14 +1,15 @@
-import base64
-st = 'flag{Base64_XOR_Flag}'
-key = 0x42
-flag = [bytes((ord(x) ^ 0x42)) for x in st]
+import math
 
-print(flag)
-flag = [base64.b64encode(x) for x in flag]
-print("Flag:", flag)
-# encoded_flag = "-37 -47 -36 -38 -58 -27 -14 -17 -30 -13 -14 -23 -30 -5 -47 -36 -38 -64"
-# encoded_flag = encoded_flag.split(' ')
-# enc = [int(x) for x in encoded_flag]
-# key = 0x42
-# flag = "".join(chr(~(byte ^ key)) for byte in enc)
-# print("Flag:", flag)
+
+def count_numbers():
+    # Первая цифра (наибольший разряд) может принимать значения 1, 2, 3, 4.
+    first_digit_options = 4
+
+    # Количество способов выбрать и упорядочить оставшиеся 7 цифр из оставшихся 14 цифр:
+    rest_permutations = math.perm(14, 7)  # начиная с Python 3.8
+
+    # Итоговое количество:
+    return first_digit_options * rest_permutations
+
+
+print(count_numbers())
