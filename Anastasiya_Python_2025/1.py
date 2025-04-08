@@ -113,11 +113,11 @@
 
 
 
-# d = 11223923812621837632873235812321532132153982173512381235
-# sm = 0
-# for x in str(d):
-#     sm += int(x)
-# print(sm)
+d = 112239238126218376
+sm = 0
+for x in str(d):
+    sm  +=int(x)
+print(sm)
 # for x in range(100):
 #     print('Привет')
 
