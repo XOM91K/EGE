@@ -2,11 +2,11 @@
 
 #Перестановки
 import itertools  #iteration tools
-ct = 0
-for x in itertools.permutations('ёлка', r=4):
-    x = ''.join(x)
-    ct += 1
-print(ct)
+# ct = 0
+# for x in itertools.permutations('ёлка', r=4):
+#     x = ''.join(x)
+#     ct += 1
+# print(ct)
 
 #ёлка
 # # 4! = 1 * 2 * 3 * 4 = 24
@@ -24,9 +24,9 @@ print(ct)
 
 
 #Комбинации
-# ct = 0
-# for x in itertools.product('СТОЛ', repeat=4):
-#     x = ''.join(x)
-#     print(x)
-#     ct += 1
-# print(ct)
+ct = 0
+for x in itertools.product('СТОЛ'):
+    x = ''.join(x)
+    print(x)
+    ct += 1
+print(ct)
