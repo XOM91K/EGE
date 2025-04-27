@@ -1,8 +1,8 @@
 import itertools
 ct = 0
-for x in itertools.permutations('ДЕВИАЦИЯ'): #АВДЕИЦЯ
+for x in set(itertools.product('ДЕВИАЦИЯ', repeat=8)): #АВДЕИЦЯ
     x = ''.join(x)
-    if 'АВ' in x or 'ВД' in x or 'ДЕ' in x or 'ЕИ' in x or 'ИЦ' in x or 'ЦЯ' in x:
+    if 'ДЕ' in x:
         x = x.replace('А', '%')
         x = x.replace('Е', '%')
         x = x.replace('И', '%')
