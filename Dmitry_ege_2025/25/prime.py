@@ -6,3 +6,6 @@ def is_prime(d):
 
 p = 121
 print(is_prime(p))
+
+12
+13
