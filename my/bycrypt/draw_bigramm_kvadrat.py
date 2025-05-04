@@ -168,10 +168,11 @@ def fixed(symbols, alphabet, target_num):
 
 # Пример использования:
 alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
-symbols = list("МОЛОЧНИК")
+symbols = list("Противоположность".upper())
+print(len(symbols))
 
 # Добавляем 3 символа (итого 9 = 3x3)
-extended_symbols = fixed(symbols, alphabet, 9)
+extended_symbols = fixed(symbols, alphabet, 25)
 print("Дополненный список:", extended_symbols)
 
 

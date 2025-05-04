@@ -1,4 +1,5 @@
-l = [[float(d.replace(',','.')) for d in x.split()] for x in open('1_a.txt')]
+import math
+l = [[float(d.replace(',','.')) for d in x.split()] for x in open('2_a.txt')]
 clusters = [[], []]
 for x in l:
     if x[1] < 3:
@@ -12,7 +13,8 @@ for x in clusters:
     for y in x:
         sm_rast = 0
         for z in x:
-            sm_rast += ((y[0] - z[0]) ** 2 + (z[1] - y[1]) ** 2) ** 0.5
+            #sm_rast += ((y[0] - z[0]) ** 2 + (y[1] - z[1]) ** 2) ** 0.5
+            sm_rast += math.dist(y, z)
         if sm_rast < mn_sm_rast:
             mn_sm_rast = sm_rast
             centroids[ind] = y
