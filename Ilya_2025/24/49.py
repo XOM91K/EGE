@@ -7,5 +7,5 @@ for x in s:
         continue
 
     for y in x:
-
+#№ 12476 PRO100 ЕГЭ 29.12.23 (Уровень: Сложный)
 print(s)
