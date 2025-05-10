@@ -1,0 +1,93 @@
+
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Результат шифрования Виженера</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 20px;
+                padding: 20px;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #f5f5f5;
+            }
+            .container {
+                background-color: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+            .result {
+                background-color: #f0f8ff;
+                padding: 15px;
+                border-left: 4px solid #4682b4;
+                margin: 10px 0;
+            }
+            .info {
+                margin-bottom: 20px;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin: 20px 0;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Результат шифрования Виженера</h1>
+
+            <div class="info">
+                <p><strong>Исходный текст:</strong> My secret message</p>
+                <p><strong>Ключ:</strong> brown</p>
+                <p><strong>Язык:</strong> EN</p>
+            </div>
+
+            <div class="result">
+                <h3>Зашифрованный текст:</h3>
+                <p>Np gapsvh irtjocr</p>
+            </div>
+
+            <div class="info">
+                <h3>Примечания:</h3>
+                <p>Для русского языка (RU) используется алфавит из 33 букв (А-Я, включая Ё):</p>
+                <table>
+                    <tr><th>Позиция</th><th>Буква</th></tr>
+                    <tr><td>0</td><td>А</td></tr>
+                    <tr><td>1</td><td>Б</td></tr>
+                    <tr><td>...</td><td>...</td></tr>
+                    <tr><td>6</td><td>Ё</td></tr>
+                    <tr><td>...</td><td>...</td></tr>
+                    <tr><td>32</td><td>Я</td></tr>
+                </table>
+                <p>Для английского языка (EN) используется алфавит из 26 букв (A-Z):</p>
+                <table>
+                    <tr><th>Позиция</th><th>Буква</th></tr>
+                    <tr><td>0</td><td>A</td></tr>
+                    <tr><td>1</td><td>B</td></tr>
+                    <tr><td>...</td><td>...</td></tr>
+                    <tr><td>25</td><td>Z</td></tr>
+                </table>
+                <p>Шифрование применяется только к буквам выбранного алфавита, остальные символы остаются без изменений.</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    
