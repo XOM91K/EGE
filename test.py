@@ -1,3 +1,7 @@
-import ipaddress
-for x in ipaddress.ip_network('115.15.60.15/255.255.128.0', 0):
-    print(x)
+for i in range(201455, 201471):
+    d = []
+    for x in range(1, i+1):
+        if i % x == 0:
+            d.append(x)
+    if len(d) == 4:
+        print(*sorted(d))
