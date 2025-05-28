@@ -1,0 +1,1 @@
+s = open(r'C:\Users\Zarif\Downloads\1125_1 (4).txt')
