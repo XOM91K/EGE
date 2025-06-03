@@ -52,17 +52,74 @@
 #
 #         except:
 #             pass
-tr = [(10, 5, 3), (7, 8, 2), (4, 4, 4), (9, 1, 10), (6, 3, 3), (5, 5, 0), (12, 7, 5), (3, 2, 1), (8, 6, 2), (11, 9, 3), (2, 2, 2), (10, 10, 10)]
+# tr = [(10, 5, 3), (7, 8, 2), (4, 4, 4), (9, 1, 10), (6, 3, 3), (5, 5, 0), (12, 7, 5), (3, 2, 1), (8, 6, 2), (11, 9, 3), (2, 2, 2), (10, 10, 10)]
+#
+#
+# for B in range(1, 100):
+#     c = 0
+#     for d in tr:
+#         x = d[0]
+#         y = d[1]
+#         z = d[2]
+#         if (x + y > B and z < 5) or (x - y == z):
+#             c += 1
+#     if c == 5:
+#         print(B)
+#         break
+# def v11(n):
+#     s = []
+#     while n > 0:
+#         s.append(n % 15)
+#         n //= 15
+#     return s[::-1]
+# for x in range(1, 100000):
+#     d = 15 ** 450 + 15 ** 100 - 11123471 - x
+#     d = v11(d)
+#     if d.count(14) == 97:
+#         print(x % 11, x, d.count(14))
 
+# l = [[int(d) for d in x.split()] for x in open('main2.txt')]
+# k = 0
+# for x in l:
+#     k += 1
+#     if sorted(x) == x:
+#         povt4 = [y for y in x if x.count(y) == 4]
+#         povt2 = [y for y in x if x.count(y) == 2]
+#         povt1 = [y for y in x if x.count(y) == 1]
+#         if len(povt4) == 4 and len(povt2) == 2 and len(povt1) == 1:
+#             if k % 7 == 0:
+#                 if max(povt4 + povt2) <= povt1[0]:
+#                     print(k, x)
 
-for B in range(1, 100):
-    c = 0
-    for d in tr:
-        x = d[0]
-        y = d[1]
-        z = d[2]
-        if (x + y > B and z < 5) or (x - y == z):
-            c += 1
-    if c == 5:
-        print(B)
-        break
+# l = [[int(d) for d in x.split()] for x in open('main2.txt')]
+# sm = 0
+# for x in l:
+#     k = 0
+#     if sorted(x)[::-1] == x:
+#         k += 1
+#     povt3 = [y for y in x if x.count(y) == 3]
+#     povt2 = [y for y in x if x.count(y) == 2]
+#     povt1 = [y for y in x if x.count(y) == 1]
+#     if len(povt3) == 3 and len(povt2) == 2 and len(povt1) == 1:
+#         k += 1
+#     if len(povt3) + len(povt2) > 0 and len(povt1) > 0 and min(povt3 + povt2) > povt1[0]:
+#         k += 1
+#     if k == 2:
+#         print(x)
+#         sm += sum(x)
+# print(sm)
+l = [int(x) for x in open('main2.txt')]
+mx = []
+mn21 = min([x for x in l if x > 0 and len(str(abs(x))) == 4 and sum(map(int, str(x))) == 21])
+for x in range(len(l) - 2):
+    k = 0
+    if len(str(abs(l[x]))) == 4 and sum(map(int, str(abs(l[x])))) == 15:
+        k += 1
+    if len(str(abs(l[x + 1]))) == 4 and sum(map(int, str(abs(l[x + 1])))) == 15:
+        k += 1
+    if len(str(abs(l[x + 2]))) == 4 and sum(map(int, str(abs(l[x + 2])))) == 15:
+        k += 1
+    if k == 2:
+        if (l[x] + l[x + 1] + l[x + 2]) * 98 >= mn21 ** 2:
+            mx.append(l[x] + l[x + 1] + l[x + 2])
+print(len(mx), max(mx))
