@@ -91,35 +91,46 @@
 #                 if max(povt4 + povt2) <= povt1[0]:
 #                     print(k, x)
 
-# l = [[int(d) for d in x.split()] for x in open('main2.txt')]
-# sm = 0
-# for x in l:
+l = [[int(d) for d in x.split()] for x in open('main2.txt')]
+sm = 0
+for x in l:
+    k = 0
+    if sorted(x)[::-1] == x:
+        k += 1
+    povt3 = [y for y in x if x.count(y) == 3]
+    povt2 = [y for y in x if x.count(y) == 2]
+    povt1 = [y for y in x if x.count(y) == 1]
+    if len(povt3) == 3 and len(povt2) == 2 and len(povt1) == 1:
+        k += 1
+    if len(povt3) + len(povt2) > 0 and len(povt1) > 0 and min(povt3 + povt2) > povt1[0]:
+        k += 1
+    if k == 3:
+        print(x)
+        sm += sum(x)
+print(sm)
+# l = [int(x) for x in open('main2.txt')]
+# mx = []
+# mn21 = min([x for x in l if x > 0 and len(str(abs(x))) == 4 and sum(map(int, str(x))) == 21])
+# for x in range(len(l) - 2):
 #     k = 0
-#     if sorted(x)[::-1] == x:
+#     if len(str(abs(l[x]))) == 4 and sum(map(int, str(abs(l[x])))) == 15:
 #         k += 1
-#     povt3 = [y for y in x if x.count(y) == 3]
-#     povt2 = [y for y in x if x.count(y) == 2]
-#     povt1 = [y for y in x if x.count(y) == 1]
-#     if len(povt3) == 3 and len(povt2) == 2 and len(povt1) == 1:
+#     if len(str(abs(l[x + 1]))) == 4 and sum(map(int, str(abs(l[x + 1])))) == 15:
 #         k += 1
-#     if len(povt3) + len(povt2) > 0 and len(povt1) > 0 and min(povt3 + povt2) > povt1[0]:
+#     if len(str(abs(l[x + 2]))) == 4 and sum(map(int, str(abs(l[x + 2])))) == 15:
 #         k += 1
 #     if k == 2:
-#         print(x)
-#         sm += sum(x)
-# print(sm)
-l = [int(x) for x in open('main2.txt')]
-mx = []
-mn21 = min([x for x in l if x > 0 and len(str(abs(x))) == 4 and sum(map(int, str(x))) == 21])
-for x in range(len(l) - 2):
-    k = 0
-    if len(str(abs(l[x]))) == 4 and sum(map(int, str(abs(l[x])))) == 15:
-        k += 1
-    if len(str(abs(l[x + 1]))) == 4 and sum(map(int, str(abs(l[x + 1])))) == 15:
-        k += 1
-    if len(str(abs(l[x + 2]))) == 4 and sum(map(int, str(abs(l[x + 2])))) == 15:
-        k += 1
-    if k == 2:
-        if (l[x] + l[x + 1] + l[x + 2]) * 98 >= mn21 ** 2:
-            mx.append(l[x] + l[x + 1] + l[x + 2])
-print(len(mx), max(mx))
+#         if (l[x] + l[x + 1] + l[x + 2]) * 98 >= mn21 ** 2:
+#             mx.append(l[x] + l[x + 1] + l[x + 2])
+# print(len(mx), max(mx))
+# import sys, functools
+# sys.setrecursionlimit(100000)
+# @functools.lru_cache(None)
+# def F(n):
+#     if n > 10000:
+#         return n + 4
+#     if n <= 10000:
+#         return 3 * n + 5 + F(n + 3)
+# for i in range(1, 10000):
+#     F(i)
+# print(F(707) - F(716))
