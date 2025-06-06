@@ -4,3 +4,5 @@ for x in range(0,34):
     c = x * 34 ** 4 + 10 * 34 ** 3 + 18 * 34 ** 2 + 9 * 34 + 8
     if (a+b*c)%13==0:
         print(x,(a+b*c)//13)
+for x in range(10**18):
+    print(x)
