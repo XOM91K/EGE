@@ -1,8 +1,0 @@
-s = open('23.txt').readline()
-s = s.replace('YZ', '##')
-s = s.replace('YZZ', '###')
-s = s.replace('XY', '##')
-s = s.replace('Y', 'X')
-s = s.replace('X', 'X')
-s = s.split('X')
-print(len(max(s, key=len)))
