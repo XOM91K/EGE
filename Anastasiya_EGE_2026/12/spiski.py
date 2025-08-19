@@ -46,3 +46,6 @@
 #print([x for x in range(1, 101) if x % 5 == 0 and x % 2 != 0])
 s = '589'
 print([int(x) for x in s])
+
+# 27
+# 3

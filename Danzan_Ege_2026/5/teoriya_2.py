@@ -23,3 +23,15 @@
 # t = (x for x in range(1, 10_000_000))
 # print(l.__sizeof__())
 # print(t.__sizeof__())
+
+# set
+# s = 'abracadabra'
+# print(set(s))
+# print(len(set(s)))
+# s = 'abra'
+
+s = 'abcdef'
+# print(''.join(sorted(s)))
+# print(list(s))
+if list(s) == sorted(s):
+    print('da')
