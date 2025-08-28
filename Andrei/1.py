@@ -54,8 +54,25 @@
 # while d > 0:
 #     print('Привет')
 #     d -= 1
-for x in range(1, 10001):
-    print('Привет')
-    if x % 557 == 0 and x > 5000:
-        print(x)
-        break
+# for x in range(1, 10001):
+#     print('Привет')
+#     if x % 557 == 0 and x > 5000:
+#         print(x)
+#         break
+s = 'HelloWorld'
+# print(s[::-1])
+# print(s[::2])
+# print(s[-2] + s[-1])
+# print(s[-2:])
+# print(s[0] + s[1] + s[2] + s[3])
+# print(s[:4])
+# print(s.replace('l', 'L', 2))
+# print(s.count('o'))
+# print(s.upper())
+# print(s.lower())
+s = 555
+s = str(s)
+sm = 0
+for x in s:
+    sm = sm + int(x)
+print(sm)
