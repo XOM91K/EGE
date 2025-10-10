@@ -62,8 +62,20 @@ l = ['h', 'e', 'l', 'l', 'o']
 # # d[2] = 15
 # d = list(map(round, d))
 # print(d)
+# s = 'Hello world'
+# s = s.split('o')
+# print(s)
+# s = 'abracadabra'
+# s = s.split('r')
+# print(s)
+# colors = ['red', 'blue', 'green', 'brown', 'black', 'white']
+# # 'red blue green brown black white'
+# colors = ' ][ '.join(colors)
+# print(colors)
 
-
-s = 'Hello world'
-s = s.split(' ')
-print(s[0])
+N = list(map(int, input().split()))
+print(N)
+print(sum(N))
+print(max(N))
+print(min(N))
+print(sorted(N))

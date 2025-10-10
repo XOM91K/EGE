@@ -14,8 +14,29 @@
 # s = '0123456789'
 # print(s[::2])
 # print(s[1::2])
-s = '12312312390'
-print(s.isdigit())
+# s = 'Hello World'
+# print(s.count('l'))
+# print(s.index('l'))
+# print(s.rindex('l'))
+# print(s.replace('l', 'w'))
+# print(s.lower())
+# print(s.upper())
+# s = s.upper()
+# print(s)
+# print(s.isdigit())
 # print(s.islower())
 # print(s.isalpha()) # alphabet
 # print(s.istitle())
+
+# Функции
+# a = 'asduiasdasodugaqwdoiqwgdqwodiwqudgwqodwqgqow'
+# print(len(a)) # length
+# a = 'hello'
+# print(a[::-1])
+# print(a[3:])
+# print(a[0:3])
+# print(a[:3])
+
+# bool
+# a = True
+# print(a)
