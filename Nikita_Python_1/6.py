@@ -1,0 +1,11 @@
+l = ['orange', 'apple', 'apple', 5, 5, 10, -5, 3, 2, 'car']
+print(l.count(5))
+print(l.count('apple'))
+l.append(500)
+print(l)
+l.insert(2, 3)
+print(l)
+l.remove('apple')
+print(l)
+l.pop(4)
+print(l)
