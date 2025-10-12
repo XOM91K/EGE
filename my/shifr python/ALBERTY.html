@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Диск Альберти</title>
+<style>
+    body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        margin: 0;
+        color: #333;
+    }
+    .disk {
+        position: relative;
+        width: 400px;
+        height: 400px;
+    }
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+    }
+    .outer {
+        border: 4px solid #2c3e50;
+        background: #f5f7fa;
+        z-index: 1;
+    }
+    .inner {
+        width: 80%; height: 80%;
+        top: 10%; left: 10%;
+        border: 3px solid #e74c3c;
+        background: #ffe5d2;
+        z-index: 2;
+    }
+    .letter {
+        position: absolute;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+    }
+    .outer-letter { color: #2c3e50; }
+    .inner-letter { color: #c0392b; }
+    .line {
+        position: absolute;
+        height: 2px;
+        background: red;
+        transform-origin: 0 0;
+        display: none;
+        z-index: 5;
+    }
+    .controls { 
+        margin-top: 20px;
+        text-align: center;
+    }
+    button {
+        margin: 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background: #2980b9;
+        color: #fff;
+        cursor: pointer;
+    }
+    input {
+        margin-top: 10px;
+        padding: 8px;
+        width: 350px;
+        border: 2px solid #2980b9;
+        border-radius: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h1>Диск Альберти</h1>
+<div class="disk">
+    <div class="circle outer" id="outerDisk"></div>
+    <div class="circle inner" id="innerDisk"></div>
+    <div class="line" id="connectionLine"></div>
+</div>
+
+<div class="controls">
+	<button onclick="rotateInner(1)">⟲ Влево</button>
+    <button onclick="rotateInner(-1)">Вправо ⟳</button>
+    <button onclick="shuffleInner()">Перемешать</button>
+    <button onclick="resetInner()">Сброс</button>
+    <br>
+    <input type="text" id="customAlphabet" placeholder="Введите свой алфавит (33 буквы)">
+    <br>
+    <button onclick="setCustomAlphabet()">Установить алфавит</button>
+</div>
+
+<script>
+const alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+let innerOrder = shuffle([...alphabet]);
+
+const outerDisk = document.getElementById('outerDisk');
+const innerDisk = document.getElementById('innerDisk');
+const connectionLine = document.getElementById('connectionLine');
+
+// рисуем буквы по кругу
+function placeLetters(container, letters, radius, className) {
+    container.innerHTML = '';
+    const step = 2 * Math.PI / letters.length;
+    letters.forEach((letter, i) => {
+        const angle = i * step - Math.PI/2;
+        const x = radius * Math.cos(angle) + container.clientWidth/2;
+        const y = radius * Math.sin(angle) + container.clientHeight/2;
+
+        const el = document.createElement('div');
+        el.className = `letter ${className}`;
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
+        el.textContent = letter;
+        container.appendChild(el);
+
+        if (className === 'outer-letter') {
+            el.addEventListener('mouseenter', () => showConnection(i));
+            el.addEventListener('mouseleave', hideConnection);
+        }
+    });
+}
+
+// создаём оба диска
+function createDisks() {
+    placeLetters(outerDisk, [...alphabet], 180, 'outer-letter');
+    placeLetters(innerDisk, innerOrder, 140, 'inner-letter');
+}
+
+// показываем соединение (по индексу 1-в-1)
+function showConnection(index) {
+    const outerLetters = document.querySelectorAll('.outer-letter');
+    const innerLetters = document.querySelectorAll('.inner-letter');
+
+    const outerRect = outerLetters[index].getBoundingClientRect();
+    const innerRect = innerLetters[index].getBoundingClientRect();
+    const diskRect = outerDisk.getBoundingClientRect();
+
+    const x1 = outerRect.left + outerRect.width/2 - diskRect.left;
+    const y1 = outerRect.top + outerRect.height/2 - diskRect.top;
+    const x2 = innerRect.left + innerRect.width/2 - diskRect.left;
+    const y2 = innerRect.top + innerRect.height/2 - diskRect.top;
+
+    const dx = x2 - x1, dy = y2 - y1;
+    const length = Math.hypot(dx, dy);
+    const angle = Math.atan2(dy, dx) * 180/Math.PI;
+
+    connectionLine.style.width = length + 'px';
+    connectionLine.style.left = x1 + 'px';
+    connectionLine.style.top = y1 + 'px';
+    connectionLine.style.transform = `rotate(${angle}deg)`;
+    connectionLine.style.display = 'block';
+}
+
+function hideConnection() {
+    connectionLine.style.display = 'none';
+}
+
+// вращение = просто сдвиг массива
+function rotateInner(steps) {
+    innerOrder = rotateArray(innerOrder, steps);
+    placeLetters(innerDisk, innerOrder, 140, 'inner-letter');
+}
+
+// перемешать заново
+function shuffleInner() {
+    innerOrder = shuffle([...alphabet]);
+    createDisks();
+}
+
+// сброс
+function resetInner() {
+    innerOrder = shuffle([...alphabet]);
+    createDisks();
+}
+
+// установить свой алфавит
+function setCustomAlphabet() {
+    const input = document.getElementById('customAlphabet').value.trim().replace(/\s+/g, '');
+    if (input.length !== alphabet.length) {
+        alert(`Алфавит должен содержать ${alphabet.length} букв!`);
+        return;
+    }
+    innerOrder = [...input];
+    createDisks();
+}
+
+// утилиты
+function rotateArray(arr, steps) {
+    const n = arr.length;
+    const s = ((steps % n) + n) % n;
+    return arr.slice(s).concat(arr.slice(0, s));
+}
+
+function shuffle(arr) {
+    for (let i=arr.length-1; i>0; i--) {
+        const j = Math.floor(Math.random()*(i+1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+// инициализация
+createDisks();
+</script>
+</body>
+</html>
