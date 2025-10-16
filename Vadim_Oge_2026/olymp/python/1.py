@@ -14,3 +14,16 @@
 # # for x in range(0, 6):
 # #     answer += chr(ord(s[x]) ^ ord(key))
 # # print(answer)
+# vsosh{asiodhaosdihasodihqwd9812et928t1280}
+# import base64
+# s = 'vsosh{asiodhaosdihasodihqwd9812et928t1280}'
+# print(s)
+# print(base64.b64encode(s.encode()).decode())
+# s = 'dnNvc2h7YXNpb2RoYW9zZGloYXNvZGlocXdkOTgxMmV0OTI4dDEyODB9'
+# print(base64.b64decode(s).decode())
+s = input()
+s2 = input()
+answer = ''
+for x in range(len(s)):
+    answer += chr(ord(s[x]) ^ ord(s2))
+print(answer)

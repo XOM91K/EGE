@@ -8,7 +8,7 @@ def caesar_encrypt(text, shift):
         else:
             result += char
     return result
-text = "холодный лес и дождь"
+text = "СОЛНЫШКО ВЗОШЛО И Я ПОШЕЛ ГУЛЯТЬ И СКОРО ВЕРНУТЬ ДОМОЙ"
 encrypted = caesar_encrypt(text, 3)
 # руфтэл озщ к увгнб  острый меч и сабля
 print(encrypted)  # ыйфйудщд
