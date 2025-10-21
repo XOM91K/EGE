@@ -1,3 +1,4 @@
+
 # s = 'Привет'
 # s = s.encode().hex()
 # s2 = 'd09fd180d0b8d0b2d0b5d182'
@@ -15,7 +16,9 @@
 # #     answer += chr(ord(s[x]) ^ ord(key))
 # # print(answer)
 # vsosh{asiodhaosdihasodihqwd9812et928t1280}
-# import base64
+import base64
+s = 'VlNPU0h7UzRtXyF9'
+print(base64.b64decode(s).decode())
 # s = 'vsosh{asiodhaosdihasodihqwd9812et928t1280}'
 # print(s)
 # print(base64.b64encode(s.encode()).decode())
