@@ -6,7 +6,7 @@ def dels(d):
                 l.append(x)
             if (d // x) % 2 != 0:
                 l.append(d // x)
-    return sorted(l)
+    return sorted(set(l))
 for x in range(18782, 18823):
     if len(dels(x)) == 3:
         print(*dels(x))
