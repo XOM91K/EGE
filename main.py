@@ -36,6 +36,24 @@
 # print('d' in 'oasdjaoiddhaodooiaqwdioqw')
 # print('d' not in 'oasdjaoiddhaodooiaqwdioqw')
 # print('o' in 'Moscow')
-s = 'hello'
-print(s.title())
-print(s.istitle())
+# s = 'hello'
+# print(s.title())
+# print(s.istitle())
+
+
+
+
+
+
+d = '123'
+print(d.zfill(10))
+
+
+
+
+
+
+
+
+
+
