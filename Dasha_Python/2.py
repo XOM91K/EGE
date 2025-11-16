@@ -51,3 +51,52 @@
 # print(type(s))
 # s = {}
 # print(type(s))
+
+a=int(input())
+b=int(input())
+c=int(input())
+N=int(input())
+T = a + 2*b + c
+full = N // T
+remain = N % T
+red = full * (a + b)
+yellow = full * (2*b)
+green = full * c
+t = 0
+if remain > 0:
+    if remain >= a:
+        red += a
+        t += a
+    else:
+        red += remain
+        t = remain
+if remain > t:
+    left = remain - t
+    if left >= b:
+        red += b
+        yellow += b
+        t += b
+    else:
+        red += left
+        yellow += left
+        t = remain
+if remain > t:
+    left = remain - t
+    if left >= c:
+        green += c
+        t += c
+    else:
+        green += left
+        t = remain
+if remain > t:
+    left = remain - t
+    if left >= b:
+        yellow += b
+        t += b
+    else:
+        yellow += left
+        t = remain
+
+print(red)
+print(yellow )
+print(green)

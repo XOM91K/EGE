@@ -13,7 +13,7 @@ s = open('1.txt').readline()
 # print(m)
 # m = re.findall(r"\s",s) # space   \r \n \t " "
 # print(m)
-# m = re.findall(r"\w",s) # word [0-9A-z]
+# m = re.findall(r"\w",s) # word [0-9A-zА-Я-а-яА-я]
 # print(m)
 # Сохраняющие и несохраняющие группирующие скобки
 m = re.findall(r"(?:qwe)+",s)
