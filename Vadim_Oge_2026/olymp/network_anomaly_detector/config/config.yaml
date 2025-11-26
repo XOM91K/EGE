@@ -1,0 +1,22 @@
+capture:
+  interface: "eth0"
+  buffer_size: 1024
+  timeout: 30
+
+detection:
+  threshold: 0.85
+  window_size: 1000
+  update_interval: 300
+
+signatures:
+  update_url: "https://threat-intel.example.com/signatures"
+  auto_update: true
+
+ml:
+  model_path: "models/temporal_model.h5"
+  retrain_interval: 86400
+
+alerts:
+  email_enabled: false
+  webhook_url: ""
+  log_file: "alerts.log"
