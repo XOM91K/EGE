@@ -1,59 +1,47 @@
-# s = 'Hello World'
-# print(s.replace('l', '#'))
-# s = s.replace('l', '#')
-# print(s)
-# s = '123122'
-# print(s.islower())
-# print(s.isupper())
-# print(s.isdigit())
-# print(s.isalpha())
-# print(s + 'i')
-# s = s + 'i'
-# print(s)
-# Методы
-# print(s.replace('l', 'L', 2))
-#print(s.replace('ll', '@@'))
-# print(s.upper())
-# print(s.lower())
-# print(s.rindex('l'))
-# print(s.index('l'))
-# print(s.count('ll'))
-# print(s.count('l'))
-# print(len(s))
-# print(s[:2])
-# print(s[2:])
-# print(s[::-1])
-# print(s[::4])
-# print(s[0:4])
-# print(s[-3] + s[-2] + s[-1])
-# print(s[-3:])
-# print(s[-5:])
-# print(5 > 5)
-# print(5 == 6)
-# print(5 >= 5) # < <=
-# print(1 != 2)
-# print(5 != 5)
-# print('d' in 'oasdjaoiddhaodooiaqwdioqw')
-# print('d' not in 'oasdjaoiddhaodooiaqwdioqw')
-# print('o' in 'Moscow')
-# s = 'hello'
-# print(s.title())
-# print(s.istitle())
+m = 1089548068563518694664488495029
 
+encrypted_flag = [
+    646518557312890896589919614913,
+    646518557312890896589919614916,
+    646518557312890896589919614936,
+    646518557312890896589919614916,
+    646518557312890896589919614943,
+    646518557312890896589919614924,
+    646518557312890896589919614938,
+    646518557312890896589919614926,
+    646518557312890896589919614952,
+    646518557312890896589919614951,
+    646518557312890896589919614949,
+    646518557312890896589919614969,
+    646518557312890896589919614960,
+    646518557312890896589919614952,
+    646518557312890896589919614942,
+    646518557312890896589919614850,
+    646518557312890896589919614952,
+    646518557312890896589919614851,
+    646518557312890896589919614912,
+    646518557312890896589919614852,
+    646518557312890896589919614916,
+    646518557312890896589919614936,
+    646518557312890896589919614938,
+    646518557312890896589919614852,
+    646518557312890896589919614922,
+]
 
+r_2 = 444169228194372143885394316500
+r_3 = 839590312395854425286949838473
 
+# Compute modular inverse of r_2 modulo m
+inv_r2 = pow(r_2, -1, m)
 
+# Compute r_4 = a * r_3, where a = r_3 * r_2^{-1} mod m
+XOR_KEY = (r_3 * r_3 * inv_r2) % m
 
+# Decrypt the flag
+flag_chars = []
+for x in encrypted_flag:
+    byte_val = (x ^ XOR_KEY) & 0xFF
+    flag_chars.append(chr(byte_val))
 
-d = '123'
-print(d.zfill(10))
-
-
-
-
-
-
-
-
-
-
+flag = "".join(flag_chars)
+print(flag)
