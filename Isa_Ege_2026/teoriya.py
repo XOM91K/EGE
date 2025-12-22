@@ -119,12 +119,17 @@
 # print(ct)
 # for x in range(10, -1, -1):
 #     print(x)
-d = 188
-print(bin(d)[2:])
-d = 12331
-print(oct(d)[2:])
-d = 12103
-print(hex(d)[2:])
+# d = 188
+# print(bin(d)[2:])
+# d = 12331
+# print(oct(d)[2:])
+# d = 12103
+# print(hex(d)[2:])
+#
+# print(int('2f47', 16))
+# print(int('30053', 8))
 
-print(int('2f47', 16))
-print(int('30053', 8))
+
+d = '24abcdefg'
+print(d[2:])
+

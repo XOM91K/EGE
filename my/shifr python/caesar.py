@@ -8,8 +8,8 @@ def caesar_encrypt(text, shift):
         else:
             result += char
     return result
-text = "всош{вот_он_флаг}"
-encrypted = caesar_encrypt(text, 3)
+text = "приветмирок"
+encrypted = caesar_encrypt(text, 5)
 # руфтэл озщ к увгнб  острый меч и сабля
 print(encrypted)  # ыйфйудщд
 # alphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя"

@@ -1,0 +1,10 @@
+s = open(r'C:\Users\Zarif\Downloads\1088_1 (8).txt').readline()
+k = 0
+s = s.split('CD')
+mx = []
+for x in range(len(s) - 160):
+    ln = 0
+    for y in range(0, 161):
+        ln += len(s[x + y])
+    mx.append(ln + 160 * 2)
+print(max(mx) + 2)
