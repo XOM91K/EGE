@@ -130,6 +130,14 @@
 # print(int('30053', 8))
 
 
-d = '24abcdefg'
-print(d[2:])
+# d = '24abcdefg'
+# print(d[2:])
 
+# a = 'abracadabra'
+# print(set(a))
+a = [1, 2, 3]
+b = [3, 4, 5]
+print(set(a).intersection(set(b)))
+print(set(a).union(set(b)))
+print(set(a).difference(set(b)))
+print(set(a).symmetric_difference(set(b)))
