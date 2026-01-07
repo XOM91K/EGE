@@ -132,6 +132,9 @@ s = 'ekskovator'
 #     print(x)
 # for x in range(2, 7, 2):
 #     print(x)
-s = 'hello'
-for x in s:
-    print(x)
+# s = 'hello'
+# for x in s:
+#     print(x)
+# R = '1010100101'
+# R = R + '0'
+# print(R)
