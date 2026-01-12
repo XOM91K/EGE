@@ -1,6 +1,6 @@
-key = "key_with_the_same_length_maybe_little_bit_more_hue_hue_hue"
+key = "my_key_is_same_length_its_my_fault_yep"
 
-with open("encoded.txt", "rb") as f:
+with open("encoded2.txt", "rb") as f:
     encoded = f.read()
 
 N = len(encoded)

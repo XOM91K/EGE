@@ -74,13 +74,69 @@
 # print(min(l))
 # print(len(l))
 
-# кортежи tuple
-l = [x for x in range(1, 100_000_000)]
-# l[1] = '5'
+# # кортежи tuple
+# l = [x for x in range(1, 100_000_000)]
+# # l[1] = '5'
+# # print(l)
+# t = (x for x in range(1, 100_000_000))
+# # t[1] = '5'
+# print(l.__sizeof__())
+# print(t.__sizeof__())
+# # print(type(l))
+# # print(type(t))
+
+
+# Множества set
+# s = {1, 2, 2, 3, 3, 3, 3, 5, 5}
+# # l = [1, 2, 3]
+# # t = (1, 2, 3)
+# print(s)
+# print(s.__sizeof__())
+# a = {1, 2, 3}
+# b = {3, 4, 5}
+# print(a.union(b))
+# print(a.intersection(b))
+# print(a.difference(b))
+# print(a.symmetric_difference(b))
+# print(a - b)
+# print(b - a)
+# print(a | b)
+# print(a & b)
+# s = 'abracadabra'
+# # print(list(s))
+# # print(tuple(s))
+# s = set(s)
+# print(s[2])
+# s = {8, 5, 10, 2}
+# print(max(s))
+# print(sorted(s))
+# d = int(input())
+# if d % 2 == 0:
+#     print('Число четное')
+# else:
+#     print('Число нечетное')
+# # Тернарный условный оператор
+# print('Число четное' if d % 2 == 0 else 'Число нечетное')
+# for i in range(0, 101):
+#     print(i)
+# str, list, tuple,
+# for i in (0, 1, 9):
+#     print(i)
+# for i in 'hello':
+#     print(i)
+# for i in range(1, 100, 2):
+#     print(i)
+# for i in range(100, 1, -1):
+#     print(i)
+# l = []
+# for i in range(0, 1_000_001):
+#     l.append(i)
 # print(l)
-t = (x for x in range(1, 100_000_000))
-# t[1] = '5'
-print(l.__sizeof__())
-print(t.__sizeof__())
-# print(type(l))
-# print(type(t))
+# Генаратор списков
+# print([i ** 2 for i in range(0, 1000) if i > 500 and i % 127 == 0])
+d = 10
+while d > 0:
+    d -= 1
+    if d == 5:
+        continue
+    print('hello', d)
