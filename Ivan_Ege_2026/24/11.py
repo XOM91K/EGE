@@ -1,0 +1,13 @@
+import re
+s = open(r'C:\Users\Zarif\Downloads\195_1 (15).txt').readline()
+m0 = re.findall(r'0[KNLF]+0', s)
+m2 = re.findall(r'2[KNLF]+2', s)
+m4 = re.findall(r'4[KNLF]+4', s)
+m6 = re.findall(r'6[KNLF]+6', s)
+m8 = re.findall(r'8[KNLF]+8', s)
+x0 = len(max(m0, key=len))
+x2 = len(max(m2, key=len))
+x4 = len(max(m4, key=len))
+x6 = len(max(m6, key=len))
+x8 = len(max(m8, key=len))
+print(max([x0, x2, x4, x6, x8]))
