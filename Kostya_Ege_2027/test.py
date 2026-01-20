@@ -134,9 +134,17 @@
 # print(l)
 # Генаратор списков
 # print([i ** 2 for i in range(0, 1000) if i > 500 and i % 127 == 0])
-d = 10
-while d > 0:
-    d -= 1
-    if d == 5:
-        continue
-    print('hello', d)
+# d = 10
+# while d > 0:
+#     d -= 1
+#     if d == 5:
+#         continue
+#     print('hello', d)
+
+# Переводы в системы счисления
+d = 12381
+print(bin(d)[2:]) # в 2-ую систему
+print(oct(d)[2:]) # 8ую
+print(hex(d)[2:]) # 16ую
+print(int('305d', 16))
+print(int('30135', 8))
