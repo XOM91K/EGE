@@ -90,7 +90,7 @@ s = 'ekskovator'
 # a.append(40)
 # print(a.count(3))
 # print(a.index(2))
-#
+# 123 'hello'
 # print(a)
 # s = [1, 9, 8, 10, -10, -4, 5, 10]
 # print(s[0:3])

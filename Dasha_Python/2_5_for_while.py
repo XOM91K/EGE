@@ -15,7 +15,7 @@
     # 2 16
 # for x in 'world':
 #     print(x)
-# d = 'ekskovator'
+# d = 'ekskavator'
 # # AEYUIO
 # for x in d:
 #     if x in 'aeouyi':
@@ -36,7 +36,22 @@
 #     d -= 2
 # for x in range(0, 1000, 2):
 #     print(x)
-s = 'dio12hdo12id2go12dg9as8dh21oidbasd124354657687'
-for x in s:
-    if x in '0123456789':
-        print(x)
+# s = 'dio12hdo12id2go12dg9as8dh21oidbasd124354657687'
+# for x in s:
+#     if x in '0123456789':
+#         print(x)
+import random
+# l = []
+# for x in range(1000):
+#     if x % 48 == 0:
+#         l.append(x - 4)
+# print(l)
+# # Генераторы списков (Списочные вывражения)
+# print([x - 4 for x in range(1000) if x % 48 == 0])
+# Тернарный условный оператор
+# d = int(input())
+# print('Число четное' if d % 2 == 0 else 'Число нечётное')
+# if d % 2 == 0:
+#     print('Число четное')
+# else:
+#     print('Число нечётное')

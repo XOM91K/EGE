@@ -7,6 +7,7 @@ def dels(d):
     return sorted(set(l))
 for x in range(10_000, 31_623):
     x = x ** 2
+    print(x)
     if x % 2 == 0:
         d = dels(x)
         if len(d) == 39:
