@@ -86,3 +86,13 @@ s = 'abracadabra'
 # t[0] = 100
 # print(t.count(3))
 # print(t.index(2))
+# d = 183
+# print(bin(d)[2:])
+# print(oct(d)[2:])
+# print(hex(d)[2:])
+# for x in range(5, 10, 2):
+#     print(x)
+# for x in range(10, 0, -1):
+#     print(x)
+# for x in 'hello':
+#     print(x)
