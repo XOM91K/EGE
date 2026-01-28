@@ -1,11 +1,13 @@
-l = [[float(d.replace(',','.')) for d in x.split()] for x in open('1.txt')]
-clusters = [[], []]
+l = [[float(d.replace(',','.')) for d in x.split()] for x in open('1_b.txt')]
+clusters = [[], [], []]
 for point in l:
-    if point[1] > 3:
+    if point[1] < 3:
         clusters[0].append(point)
-    else:
+    elif point[1] > 7:
         clusters[1].append(point)
-centroids = [[], []]
+    else:
+        clusters[2].append(point)
+centroids = [[], [], []]
 ind = 0
 for cluster in clusters:
     mn_sm_rast = 10 ** 10
@@ -18,4 +20,6 @@ for cluster in clusters:
             centroids[ind] = centroid
     ind += 1
 print(centroids)
-Px =
+Px = int((centroids[0][0] + centroids[1][0] + centroids[2][0]) / 3 * 10000)
+Py = int((centroids[0][1] + centroids[1][1] + centroids[2][1]) / 3 * 10000)
+print(Px, Py)
