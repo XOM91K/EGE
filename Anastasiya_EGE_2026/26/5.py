@@ -19,7 +19,13 @@ for x in new_l:
         print(x[1])
         rt -= 1
         nums.append(x[1])
-
+print(len(rating) - rating.index(667) - 1)
+1
+2
+3
+4
+5
+6
 # print(new_l)
 # print(rating)
 # 800 120
