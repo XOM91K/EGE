@@ -22,3 +22,26 @@
 # print(s[:3])
 # print(s[2])
 # print(s[-1])
+
+
+
+
+# s = '11000000000000000000000000000000000000000000000011'
+# s = s[:-3] + '00'
+# print(s)
+
+
+
+# s = '11100111'
+# # первые 3 символа на '00'
+# s = '00' + s[3:]
+# print(s)
+
+# s = 'abracaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadabra'
+# s = s.replace('a', 'A')
+# print(s)
+# s = 'ioashdowqhdoiqwdqoidhdow'
+# print(s.count('w'))
+# s = 'qwsaddasadsadsdsadsaqdsadwdqsadsadsadsad'
+# if s.count('sad') > 0:
+#     print('Да, есть')

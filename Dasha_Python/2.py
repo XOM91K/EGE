@@ -54,3 +54,16 @@
 
 # s = 'abracadabra'
 # print(len(set(s)))
+# s = '1 221 120 50 5'
+# print(list(map(int, s.split())))
+# # print([d for d in s.split()])
+
+s = '1 2 3 40 5'
+l = list(map(int, s.split()))
+l.append(100)
+l.pop(0)
+sr = sum(l) / len(l)
+print(sum([x for x in l if x > sr]))
+
+
+# print([int(d) for d in s.split()])

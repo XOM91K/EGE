@@ -1,4 +1,5 @@
 import itertools
+
 # # 4! = 1 * 2 * 3 * 4 = 24
 # # permutations - перестановки, встречается примерно в 10% задачах
 # for x in itertools.permutations('МГЛА', 4):
