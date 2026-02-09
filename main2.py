@@ -137,6 +137,20 @@
 # for x in range(1, 100):
 #     if 88.5 <= (97 * 4 + x) / 5 <= 89.4:
 #         print(x)
-for x in range(1, 21):
-    if 55 <= x * 100 / 20 <= 60:
-        print(x, x * 100 / 20)
+# for x in range(1, 21):
+#     if 55 <= x * 100 / 20 <= 60:
+#         print(x, x * 100 / 20)
+
+# import ipaddress
+#
+# net = ipaddress.ip_network("167.66.136.176/255.254.0.0", strict=False)
+# for x in net:
+#     # print(x)
+# import ipaddress
+#
+# net = ipaddress.ip_network("167.66.136.176/255.254.0.0", strict=False)
+#
+# ls = list(net.hosts())
+# min_ip = sorted(ls)[1]
+# print(min_ip)
+# print(167+66+2)
