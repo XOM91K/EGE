@@ -145,3 +145,8 @@
 # print(list(range(1, 6)))
 # import random
 # print([random.randint(1, 100) for x in range(10) if x % 2 == 0])
+
+s = '123123232125'
+print(sum([int(d) for d in s]))
+# сумма цифр
+print(sum(map(int, s)))
