@@ -154,3 +154,22 @@
 # min_ip = sorted(ls)[1]
 # print(min_ip)
 # print(167+66+2)
+import requests
+def create_session(login:str,password:str):
+    s = requests.session()
+    r = post_requests('api/auth/login/',s,json={"usernameOrEmail":login,"password":password})
+    check = r.get('error',0)
+    if check:
+        return
+    s.cookies.update({'token':r['result']['token']})
+    return s
+
+
+s = create_session('lfvb_test_1','1234')
+for i in tqdm(range(1650,1700)):
+    try:
+        r = s.get(base+f'api/task/{i}/additionalInfo/').json()
+        if r['result']['likedByMe'] == True or r['result']['dislikedByMe']:
+            print(i)
+    except:
+        pass

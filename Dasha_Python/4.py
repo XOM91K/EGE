@@ -10,7 +10,7 @@
 # l1.append(0)
 # print(*sorted(set(l1).intersection(l2))[::-1])
 
-l = [10, 1, 222, 3, 4, 5]
-n = 5
-for x in range(len(l)):
-    print(l[x])
+# l = [10, 1, 222, 3, 4, 5]
+# n = 5
+# for x in range(len(l)):
+#     print(l[x])
