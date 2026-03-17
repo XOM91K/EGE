@@ -43,7 +43,12 @@
 # s = ['Никита', 'Мирослав', 'Ян']
 # print(max(s, key=len))
 # print(max(s, key=str))
-s = 'apple banana cherry'.replace('A', 'a').split()
-for x in s:
-    x = x.replace('a', '@', 1)
-    print(x, end=' ')
+# s = 'apple banana cherry'.replace('A', 'a').split()
+# for x in s:
+#     x = x.replace('a', '@', 1)
+#     print(x, end=' ')
+
+# поиндексовый перебор
+# s = 'Helloasdioashdoiddhiosad'
+# for x in range(len(s) - 1):
+#     print(s[x] + s[x + 1])

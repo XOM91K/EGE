@@ -38,6 +38,9 @@
 # s = {'a': 555, 'c': 100}
 # print(list(s.values()))
 # print(list(s.keys()))
-# print(list(s.items()))
-a = 'hello'
-print(a[::-1])
+# # print(list(s.items()))
+# a = 'hello'
+# print(a[::-1])
+# for x in range(5):
+#     print(x)
+print(list(range(6, 15, 2)))
