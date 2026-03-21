@@ -1,6 +1,6 @@
-import itertools
+import itertools, tqdm
 ct = 0
-for x in itertools.product('0123456789ab', repeat=7):
+for x in tqdm.tqdm(itertools.product('0123456789ab', repeat=7)):
     x = ''.join(x)
     if x.count('b') == 2 and x[0] != '0':
         x = x.replace('2' , '0')
