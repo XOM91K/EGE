@@ -1,0 +1,19 @@
+import sys, functools
+sys.setrecursionlimit(1000000)
+@functools.lru_cache(None)
+def F(n):
+    if n > 40:
+        return F(n - 4) + 3020
+    if n <= 40:
+        return 3 * (G(n - 2) - 15)
+@functools.lru_cache(None)
+def G(n):
+    if n >= 301208:
+        return 10 * n + 50
+    if n < 301208:
+        return G(n + 7) - 21
+for x in range(302000, 1, -1):
+    G(x)
+for x in range(1, 302000):
+    F(x)
+print(F(5078))

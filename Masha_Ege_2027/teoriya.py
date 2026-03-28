@@ -79,3 +79,10 @@
 # t = (x for x in range(1, 100_000_000000000)) # tuple
 # print(l.__sizeof__())
 # print(t.__sizeof__())
+
+# Как найти сумму цифр
+d = 123412894712958561295081562190518
+d = str(d)
+print(d.count('1') + d.count('2') * 2 + d.count('3') * 3 + d.count('4') * 4)
+print(sum([int(y) for y in d]))
+print(sum(map(int, d)))

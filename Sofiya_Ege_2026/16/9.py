@@ -8,8 +8,4 @@ def f(n):
 def g(n):
     if n>303728: return n-15
     if n<=303728: return g(n+8)/2-109
-for n in range(304000, 1, -1):
-    g(n)
-for n in range(1, 2050):
-    f(n)
 print(f(2049))

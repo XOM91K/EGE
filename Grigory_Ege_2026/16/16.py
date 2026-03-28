@@ -1,11 +1,10 @@
-import sys, functools
-sys.setrecursionlimit(10000)
-@functools.lru_cache(None)
-def F(n):
-    if n < 6 :
-        return n
-    if n >= 6 :
-        return (3*n-2)*F(n-5)
-for x in range(1, 21000):
-    F(x)
-print((F(20568)-51702*F(20563))/F(20553))
+l = [[int(d) for d in x.split()] for x in open('16.txt')]
+ct = 0
+for x in l :
+    x = sorted(x)
+    ar = ((x[0]+x[1]+x[2]+x[3]+x[4])/5)
+    if x.count(x[-1]) == 1 :
+        if len(set(x)) < 6 :
+            if x[-1] > ar * 3:
+                ct+=1
+print(ct)

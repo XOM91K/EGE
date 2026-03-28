@@ -1,4 +1,4 @@
-n = 124800
+n = 124800 # метод дихотомии
 for A in range(n, 1, -1):
     can=True
     for x in range(1,n):
