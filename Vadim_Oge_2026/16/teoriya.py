@@ -82,10 +82,67 @@
 
 # Найти сумму чисел, которые кратны 7 и двузначные.
 # вводим числа, до тех пор, пока не будет введено число 0
+# a = int(input())
+# sm = 0
+# while a != 0:
+#     if a % 7 == 0 and len(str(a)) == 2:
+#         sm = sm + a
+#     a = int(input())
+# print(sm)
+
+# подаются числа, признаком окончания ввода, явл. число 0
+# нужно найти кол-во отрицательных чисел, которые кратны 4
+# a = int(input())
+# d = 0
+# while a != 0:
+#     if a < 0 and a % 4 == 0:
+#         d = d + 1
+#     a = int(input())
+# print(d)
+
+# Подается число N. Вводится N чисел, и
+# выводится среднее арифметическое этих чисел
+# N = int(input())
+# sm = 0
+# for x in range(N):  # 3 4 5
+#     a = int(input())
+#     sm += a
+# print(sm / N)
+
+
+# Вводится число N. Потом вводятся N чисел.
+# Нужно найти сумму трёхзначных чисел, которые кратны 7
+# N = int(input())
+# sm = 0
+# for x in range(N):
+#     a = int(input())
+#     if a % 7 == 0 and len(str(a)) == 3:
+#         sm += a
+# print(sm)
+
+# Вводится число N. Потом вводятся N чисел.
+# Найти среднее арифм. двузначных чисел, которые оканчиваются на 8
+# Если таких чисел нет, вывести "NO"
+# N = int(input()) # 5
+# sm = 0
+# ct = 0
+# for x in range(N):
+#     a = int(input())
+#     if len(str(a)) == 2 and str(a)[1] == '8':
+#         sm += a
+#         ct += 1
+# if ct == 0:
+#     print('NO')
+# else:
+#     print(sm / ct)
+
+
+
+
 a = int(input())
-sm = 0
+d = 0
 while a != 0:
-    if a % 7 == 0 and len(str(a)) == 2:
-        sm = sm + a
+    if len(str(a)) == 2 and str(a) == '8':
+        d += 1
     a = int(input())
-print(sm)
+print(d)
