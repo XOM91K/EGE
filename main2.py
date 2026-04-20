@@ -154,22 +154,35 @@
 # min_ip = sorted(ls)[1]
 # print(min_ip)
 # print(167+66+2)
-import requests
-def create_session(login:str,password:str):
-    s = requests.session()
-    r = post_requests('api/auth/login/',s,json={"usernameOrEmail":login,"password":password})
-    check = r.get('error',0)
-    if check:
-        return
-    s.cookies.update({'token':r['result']['token']})
-    return s
-
-
-s = create_session('lfvb_test_1','1234')
-for i in tqdm(range(1650,1700)):
-    try:
-        r = s.get(base+f'api/task/{i}/additionalInfo/').json()
-        if r['result']['likedByMe'] == True or r['result']['dislikedByMe']:
-            print(i)
-    except:
-        pass
+# import requests
+# def create_session(login:str,password:str):
+#     s = requests.session()
+#     r = post_requests('api/auth/login/',s,json={"usernameOrEmail":login,"password":password})
+#     check = r.get('error',0)
+#     if check:
+#         return
+#     s.cookies.update({'token':r['result']['token']})
+#     return s
+#
+#
+# s = create_session('lfvb_test_1','1234')
+# for i in tqdm(range(1650,1700)):
+#     try:
+#         r = s.get(base+f'api/task/{i}/additionalInfo/').json()
+#         if r['result']['likedByMe'] == True or r['result']['dislikedByMe']:
+#             print(i)
+#     except:
+#         pass
+import functools
+@functools.lru_cache(None)
+def f(x, y, s, ct):
+    if x > y:
+        return 0
+    if x == y:
+        if '2' in s and ct == 6:
+            print('da: ', s)
+        return 1
+    if x < y:
+        return f(x + 1, y, s + '1', ct + 1) + f(x ** 2, y, s + '2', ct + 1) + f(x * 2,y, s + '3', ct + 1)
+print(f(8, 202, '', 0))
+#110
