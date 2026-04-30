@@ -13,6 +13,7 @@ for cluster in clusters:
     for point1 in cluster:
         for point2 in cluster:
             if math.dist(point1, point2) > mx_rast:
-                centroids[ind] = [point1, point2]
+                centroids[ind] = [point1,point2]
+                mx_rast = math.dist(point1, point2)
     ind+=1
-print(int(min(centroids[0][0][0] + centroids[0][1][0], centroids[1][0][0] + centroids[1][1][0]) * 10000))
+print(int(min(centroids[0][0][0] + centroids[0][1][0], centroids[1][0][0] + centroids[1][1][0]) * 10000), int(max(centroids[0][0][1] + centroids[0][1][1], centroids[1][0][1] + centroids[1][1][1]) * 10000))
