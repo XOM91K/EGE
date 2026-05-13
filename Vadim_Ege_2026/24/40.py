@@ -1,0 +1,12 @@
+import re
+l = open(r'C:\Users\Zarif\Downloads\1731_1 (3).txt').readline()
+l = l.replace('A','#')
+l = l.replace('E','#')
+l = l.replace('I','#')
+l = l.replace('O','#')
+l = l.replace('U','#')
+l = l.replace('Y','#')
+l = l.replace('02', '%&')
+m = re.findall(r'&(?:[^%&#]*%&){20}[^%&#]*#',l)
+print(max(m,key=len))
+print(len(max(m,key=len)))
