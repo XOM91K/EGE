@@ -76,3 +76,4 @@ sm = 0
 for x in s:
     sm = sm + int(x)
 print(sm)
+print(sm)
