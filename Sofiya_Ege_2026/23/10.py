@@ -3,8 +3,8 @@ import functools
 def f(x, y, ct, flag):
     if x == 60:
         flag = 1
-    if x > y or str(x)[-1] == '3' or '--' in ct:
-        return 0
+    if x > y o 0r str(x)[-1] == '3' or '--' in ct:
+        return
     if x == y and flag == 1:
         return 1
     if x == y and flag == 0:
