@@ -27,7 +27,7 @@ for x in clusters:
 ct_S = [0, 0, 0]
 for x in range(3):
     for p in clusters[x]:
-        if p[2][0] == 'L' and p[2][1] == '3':
+        if p[2][0] == 'L':
             ct_S[x] += 1
             print(p)
     print('---------------')
@@ -35,18 +35,17 @@ mx_rast = []
 print(ct_S)
 for p1 in clusters[0]:
     for p2 in clusters[1]:
-        if p1[2][0] == 'L' and p1[2][1] == '3' and p2[2][0] == 'L' and p2[2][1] == '3':
+        if p1[2][0] == 'L' and p2[2][0] == 'L':
             mx_rast.append(math.dist(p1[:-1], p2[:-1]))
 for p1 in clusters[0]:
     for p2 in clusters[2]:
-        if p1[2][0] == 'L' and p1[2][1] == '3' and p2[2][0] == 'L' and p2[2][1] == '3':
+        if p1[2][0] == 'L'and p2[2][0] == 'L':
             mx_rast.append(math.dist(p1[:-1], p2[:-1]))
 for p1 in clusters[2]:
     for p2 in clusters[1]:
-        if p1[2][0] == 'L' and p1[2][1] == '3' and p2[2][0] == 'L' and p2[2][1] == '3':
+        if p1[2][0] == 'L' and p2[2][0] == 'L':
             mx_rast.append(math.dist(p1[:-1], p2[:-1]))
 print(int(math.dist(centr[0][:-1], centr[1][:-1]) * 10000), int(max(mx_rast) * 10000))
-print(math.dist([13.3797053, 26.9732115], [28.2233669, 12.5403435]))
 # m = []
 # for p in clusters[1]:
 #     # print(p)
