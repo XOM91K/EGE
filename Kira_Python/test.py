@@ -69,12 +69,34 @@ d = 5
 # print(s.rfind('a'))
 # print(s.find('o'))
 # print(s.find('w'))
-s = 'петя'
-print(s.title())
-print(s.istitle())
+# s = 'петя'
+# print(s.title())
+# print(s.istitle())
 # print(s.isupper())
 # print(s.islower())
 # print(s.isalpha())
 # print(s.count('o'))
 # print(s.replace('o', 'A', 2))
 # print(s)
+# s = 'Привет как дела у меня все хорошо'
+# s = s.replace('е', 'Е')
+# print(s)
+#print(5 > 3)
+#print(3 == 3)
+# s = 'as123781231732931724918473294dkfdshfdskfdsgfkdsjfgdsfkldsjfgdsfkldsjfgdsfiuewfgweifouwegfweoifuwgefiewoufewfio801326492384631294236420146213403214213492364920fioeghemfc.xcmwpq'
+# # v
+# # Проверка на вхождение
+# print('v' in s) # есть ли 'v' в строке s?
+# print('v' not in s)   # нету ли 'v' в строке s?
+# s = 12
+# print(s + 2)
+# s = '12'
+# print(s + '2')
+# s = '12'
+# print(s + str(2))
+#
+# b = 5
+# print(b + int('22'))
+# str = 'Привет'
+# s = '5'
+# print(s + str(8))
