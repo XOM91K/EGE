@@ -17,9 +17,13 @@
 # print(d % 10)
 # d = 123
 # print(int(str(d)[0]) + int(str(d)[1]) + int(str(d)[2]))
-s = 'aaabaaee'
-ct = 0
-for i in s:
-    if i not in 'aeouiy':
-        ct += 1
-print(ct)
+# s = 'aaabaaee'
+# ct = 0
+# for i in s:
+#     if i not in 'aeouiy':
+#         ct += 1
+# print(ct)
+s = ['Ян', 'Никита', 'Лаврентий', 'Егор']
+print(max(s, key=len))
+# ОЛОВО
+#

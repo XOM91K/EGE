@@ -19,7 +19,6 @@ for x in l:
     mxmx = max(mxmx, mn2 - mx1 + 1)
     if mn2 - mx1 + 1 < 0:
         ct_otr += 1
-    print(yach)
 print(mxmx, ct_otr + 1)
 print(mxmx, len(l) - ct_otr)
 # Разобрать

@@ -100,3 +100,15 @@ d = 5
 # str = 'Привет'
 # s = '5'
 # print(s + str(8))
+#
+# s = 'red blue green'
+# s = s.split()
+# s[-1] = s[-1].upper()
+#
+# print(s)
+# print('$$$'.join(s))
+# print('ok' + 'no')
+s = '5 3 8 1 2'
+s = list(map(int, s.split()))
+
+print(s)

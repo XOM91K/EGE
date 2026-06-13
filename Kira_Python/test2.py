@@ -54,10 +54,37 @@
 # print(len(l))
 
 
-# Кортежи tuple
-# l = [1, 2, 3]
-# t = (1, 2, 3)
+# #Кортежи tuple
+# l = [d for d in range(1, 1_000_000)]
+# t = (d for d in range(1, 1_000_000))
 # print(l.__sizeof__())
 # print(t.__sizeof__())
-# print(sum(t))
-# print(sorted(t))
+
+# Множества set()
+# Содержит только уникальные значения
+# Являются неперебираемыми
+# s = {1, 2, 3, 3, 3, 4, 5, 10, -10, 5, 5, 9}
+# s.pop()
+# s.pop()
+# print(s[1])
+# s = 'abracadabra'
+# print(set(s))
+# a = {1, 2, 3}
+# b = {3, 4, 5}
+# print(a.union(b), a | b) # объединение # pipe
+# print(a.difference(b), a - b) # разность
+# print(a.intersection(b), a & b) # пересечение
+# print(a.symmetric_difference(b))
+#[] () {}
+# Словарь
+# sl = {'red': 550, 35: 100, -5: 200, 'brown': 'green'}
+# sl.pop('red')
+# print(list(sl.items()))
+# print(list(sl.values()))
+# print(list(sl.keys()))
+# print(sl.get('brownфывфв', False))
+#print(sl['browns'])
+# print(sl['red'])
+# print(sl[-5])
+# print(sl['green'])
+

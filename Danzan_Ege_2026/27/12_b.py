@@ -41,7 +41,7 @@ for p1 in clusters[0]:
 for p1 in clusters[1]:
     for p2 in clusters[1]:
         if p1[2][0] == 'G' and p1[2][2:] == 'V' and p2[2][0] == 'G' and p2[2][2:] == 'V':
-            mx_rast.append(math.dist(p1[:-1], p2[:-1]))
+            mx_rast.append(math.dist(p1[:-1], p2[:-1]))z
 for p1 in clusters[2]:
     for p2 in clusters[2]:
         if p1[2][0] == 'G' and p1[2][2:] == 'V' and p2[2][0] == 'G' and p2[2][2:] == 'V':
