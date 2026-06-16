@@ -1,3 +1,4 @@
+2 5 16 13
 import itertools
 for x in itertools.permutations('МЕД'):
     x = ''.join(x)
