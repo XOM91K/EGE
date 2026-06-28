@@ -88,3 +88,5 @@
 # print(sl[-5])
 # print(sl['green'])
 
+l = ['Никита', 'Матвей', 'Ян', 'Егор']
+print(sorted(l, key=len))
