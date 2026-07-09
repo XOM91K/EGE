@@ -16,9 +16,12 @@
 # t = (x for x in range(1, 1_000_001))
 # print(l.__sizeof__())
 # print(t.__sizeof__())
-a = {1, 2, 3}
-b = {4, 5, 6, 3}
-print(a.intersection(b), a & b)
-print(a.union(b), a | b)
-print(a.difference(b), a - b)
-print(a.symmetric_difference(b))
+# a = {1, 2, 3}
+# b = {4, 5, 6, 3}
+# print(a.intersection(b), a & b)
+# print(a.union(b), a | b)
+# print(a.difference(b), a - b)
+# print(a.symmetric_difference(b))
+
+a = [22, 33, 44]
+print(bytes.fromhex(a))

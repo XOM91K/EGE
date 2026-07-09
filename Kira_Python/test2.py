@@ -80,13 +80,20 @@
 # sl = {'red': 550, 35: 100, -5: 200, 'brown': 'green'}
 # sl.pop('red')
 # print(list(sl.items()))
-# print(list(sl.values()))
-# print(list(sl.keys()))
-# print(sl.get('brownфывфв', False))
-#print(sl['browns'])
-# print(sl['red'])
-# print(sl[-5])
-# print(sl['green'])
-
-l = ['Никита', 'Матвей', 'Ян', 'Егор']
-print(sorted(l, key=len))
+# # print(list(sl.values()))
+# # print(list(sl.keys()))
+# # print(sl.get('brownфывфв', False))
+# #print(sl['browns'])
+# # print(sl['red'])
+# # print(sl[-5])
+# # print(sl['green'])
+# #
+# # l = ['Никита', 'Матвей', 'Ян', 'Егор']
+# # print(sorted(l, key=len))
+#
+# l = [['Петя', 5], ['Ваня', 3], ['Вика', 4], ['Вова', 3]]
+# print(sorted(l, key=lambda d: -d[1]))
+#
+# # лямбда-функции (функции в 1 строчку)
+# l = list(map(int, input().split()))
+# print([x for x in l if x % 2 == 0])
