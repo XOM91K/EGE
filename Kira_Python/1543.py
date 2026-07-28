@@ -37,9 +37,36 @@
 # # print(len(new_s))
 # s = 'asdadsa'
 # print(s.islower())
-def is_ok():
-    print('ok')
-def is_neok():
-    print('neok')
-is_neok()
-is_ok()
+# def is_ok():
+#     print('ok')
+# def is_neok():
+#     print('neok')
+# is_neok()
+# is_ok()
+# 10
+# Кирилл информатика 5
+# Кирилл физика 5
+# София информатика 4
+# София литература 4
+# София биология 4
+# Лев физика 4
+# Лев математика 3
+# Лев химия 2
+# Ярослав литература 5
+# Яна математика 4
+n = 10
+f = open('1543.txt', encoding='utf-8')
+sl = {}
+for x in range(n):
+    name = f.readline().split()
+    if name[0] not in sl:
+        sl[name[0]] = [0, 0]
+    sl[name[0]][0] += int(name[2])
+    sl[name[0]][1] += 1
+sl = sl.items()
+sl = sorted(sl, key=lambda d: -d[1][0]/d[1][1])
+for x in sl:
+    print(x[1][0] / x[1][1], x[0])
+
+# sl2 = {'one': 1, 2: 222}
+# print(sl2.items())
