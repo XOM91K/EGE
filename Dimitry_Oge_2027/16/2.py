@@ -1,0 +1,14 @@
+sm = 0
+ct = 0
+sr = 0
+a = -1
+while a != 0:
+    a = int(input())
+    if len(str(a)) == 2:
+        sm += a
+        ct += 1
+if ct == 0:
+    print('NO')
+else:
+    sr = sm / ct
+    print(sr)

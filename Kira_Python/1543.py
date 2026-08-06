@@ -115,10 +115,32 @@
 #             print(x)
 # 10 ** 2 + 10 ** 2 + 10 ** 2 + 10 ** 2
 # [1-9][1-9][1-9][1-9] 9 9 9 9  6561
-N = 1000
-for x in range(0, int(N ** 0.5) + 1):
-    for y in range(1, int(N ** 0.5) + 1):
-        for z in range(1, int(N ** 0.5) + 1):
-            for w in range(1, int(N ** 0.5) + 1):
-                if x ** 2 + y ** 2 + z ** 2 + w ** 2 == N:
-                    print(f'{x}**2 + {y} ** 2 + {z} ** 2 + {w} ** 2')
+# N = 1000
+# for x in range(0, int(N ** 0.5) + 1):
+#     for y in range(1, int(N ** 0.5) + 1):
+#         for z in range(1, int(N ** 0.5) + 1):
+#             for w in range(1, int(N ** 0.5) + 1):
+#                 if x ** 2 + y ** 2 + z ** 2 + w ** 2 == N:
+#                     print(f'{x}**2 + {y} ** 2 + {z} ** 2 + {w} ** 2')
+# N = int(input())
+# if N % 2 == 0:
+#     print(0)
+# else:
+#     for x in range(1, 1000):
+#         n = '1' * x
+#         if int(n) % N == 0:
+#             print(x)
+#             break
+# for x in range(10):
+#     for y in range(10):
+#         print('Привет')
+#         exit()
+# print('ok')
+def longest_common_prefix(s):
+    pr = s[0]
+    for x in range(len(pr)):
+        for y in range(len(s) - 1):
+            if pr[x] != s[y + 1][x]:
+                return pr[:x]
+    return pr
+print(longest_common_prefix(["flow", "flow", "flow"]))

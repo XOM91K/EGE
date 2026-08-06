@@ -39,6 +39,12 @@
 # for a in range(9):
 #     print(m)
 #     m -= 3
-d = int(input())
-for x in range(d):
-    print('Привет')
+# d = int(input())
+# for x in range(d):
+#     print('Привет')
+# for x in range(6, 10, 2):
+#     print(x)
+c = 5
+while c > 0:
+    print('Hello')
+    c = c - 1
