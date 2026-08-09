@@ -136,11 +136,29 @@
 #         print('Привет')
 #         exit()
 # print('ok')
-def longest_common_prefix(s):
-    pr = s[0]
-    for x in range(len(pr)):
-        for y in range(len(s) - 1):
-            if pr[x] != s[y + 1][x]:
-                return pr[:x]
-    return pr
-print(longest_common_prefix(["flow", "flow", "flow"]))
+# def longest_common_prefix(s):
+#     pr = s[0]
+#     for x in range(len(pr)):
+#         for y in range(len(s) - 1):
+#             if pr[x] != s[y + 1][x]:
+#                 return pr[:x]
+#     return pr
+# print(longest_common_prefix(["flow", "flow", "flow"]))
+
+
+# yellow yellaw yelcer
+# l = ['yell', 'yell', 'yell']
+# def longest_common_prefix(l):
+#     for x in range(len(l[0])):
+#         for y in l:
+#             if l[0][:x] != y[:x]:
+#                 return y[:x - 1]
+#     return l[0]
+# a = int(input())
+# n = int(input())
+# try:
+#     print(pow(a, -1, n))
+# except:
+#     print(0)
+
+
