@@ -1,0 +1,10 @@
+minecraft
+creeper
+netherite
+piglin
+z
+enderman
+diamond
+redstone
+obsidian
+wither

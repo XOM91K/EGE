@@ -97,3 +97,6 @@
 # # лямбда-функции (функции в 1 строчку)
 # l = list(map(int, input().split()))
 # print([x for x in l if x % 2 == 0])
+s = 'hello'
+for x in s:
+    print(x)
