@@ -1,6 +1,0 @@
-s = open(r'C:\Users\Zarif\Downloads\24_21 (1).txt').readline()
-s = s.replace('XX', 'X X')
-s = s.replace('YY', 'Y Y')
-s = s.replace('ZZ', 'Z Z')
-s = s.split(' ')
-print(len(max(s, key=len)))

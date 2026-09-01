@@ -1,5 +1,0 @@
-import re
-s = 'ASIODHASOSIDSHDSOIXXXXXXXXXXXXASDIOHASDASIODASHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXasudigSDIHXXXXX'
-m = re.findall(r'X+', s)
-print(max(m, key=len))
-#   '(?:LDR)+(?:L|LD)'
