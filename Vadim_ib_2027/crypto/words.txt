@@ -1,0 +1,10 @@
+gandalf
+frodo
+shadowfax
+aragorn
+legolas
+gimli
+boromir
+saruman
+galadriel
+elrond
