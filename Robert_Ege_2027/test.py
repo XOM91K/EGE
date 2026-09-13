@@ -72,3 +72,39 @@
 # print(b[1])
 # a = 353
 # print(str(a)[1])
+#l = [350, 12, -8, 8.5, 900, 12, 12]  # list
+#Методы
+# print(l.)
+# print(l.remove(12))
+# print(l.append(800))
+# l.extend([500, 350])
+# l.pop(2)
+# l.sort()
+# print(l)
+# l.count(12)
+# print(l.count(12))
+# print(l.index(-8))
+# l = [3, 4, 1]
+# # Функции
+# # print(len(l))
+# # print(max(l))
+# # print(min(l))
+# # print(sum(l))
+# print(sorted(l))
+# print(l)
+# print(l[2])
+# print(l[1:3])
+# print(l[::-1])
+# for x in [0, 1, 2, 3, 4]:
+#     print('Hello', x)
+#     print('abc', x)
+# print(list(range(5)))
+# s = 'abracadabra'
+# for x in s:
+#     print(x)
+l = []
+for x in range(0, 101):
+    if x % 2 == 0:
+        l.append(x)
+print(l)
+print([x for x in range(0, 101) if x % 2 == 0]) # Генератор списков

@@ -71,9 +71,9 @@
 # print(s[-2])
 # print('#'.join(s))
 #
-l = [1, 2, 3, 54, 4, -2, 2, 5]
-l.sort(reverse=True)
-print(l)
+# l = [1, 2, 3, 54, 4, -2, 2, 5]
+# l.sort(reverse=True)
+# print(l)
 #print(l[::-1])
 # # Методы
 # l.append(40)
@@ -97,3 +97,33 @@ print(l)
 # print(len(l))
 # print(sorted(l))
 # print(sorted(l)[::-1])
+
+
+
+# l = [100, 4, 10, 12]
+# l.append(50)
+# print(l)
+# print(sum(l))
+# print(max(l))
+# print(min(l))
+# print(sorted(l))
+
+# l = [11, 91, 103]
+# if l[1] % 2 == 0:
+#     print('Четное')
+#l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# l = []
+# for x in range(1, 1001):
+#     if x % 7 == 0:
+#         l.append(x)
+# print(l)
+# s = 'abracadabra'
+# print(s.upper())
+# print(s.replace('a', 'A'))
+# print(s.index('r'))
+# print(s.count('a'))
+
+#l = [x for x in range(1, 100_000_000)] # list
+t = (x for x in range(1, 10000000_000_000_000)) # tuple
+#print(l.__sizeof__())
+print(t.__sizeof__())
