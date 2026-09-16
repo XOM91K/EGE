@@ -77,4 +77,35 @@
 # a = 5
 # a = 39
 # print(a)
-print('2' + 2)
+# print('2' + 2)
+
+# s = 'abracadabra'
+# print(s[-4:]) # срезы
+# s = 'red blue green orange'
+# print(s.replace('e', 'G'))
+# l = [1,2,-3, 10, 3,4,5]
+# print(l[-2])
+# print(max(l))
+# print(min(l))
+# print(sum(l))
+# print(sorted(l)[::-1])
+# d = 7
+# if d % 2 == 0:
+#     print('Четное')
+# else:
+#     print('Нечетное')
+# s = 'hello world'
+# b = 'd'
+# if b not in s:
+#     print('Есть')
+# else:
+#     print('Нет')
+# s = 'abracadabra'
+# print(s[2:5])
+# for z in range(2, 9):
+#     print('Привет')
+# for x in 'brown':
+#     print(x)
+# for x in range(100, 1001):
+#     if x % 2 == 0 and x > 500:
+#         print(x)
