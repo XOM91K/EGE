@@ -123,7 +123,19 @@
 # print(s.index('r'))
 # print(s.count('a'))
 
-#l = [x for x in range(1, 100_000_000)] # list
-t = (x for x in range(1, 10000000_000_000_000)) # tuple
-#print(l.__sizeof__())
-print(t.__sizeof__())
+# #l = [x for x in range(1, 100_000_000)] # list
+# t = (x for x in range(1, 10000000_000_000_000)) # tuple
+# #print(l.__sizeof__())
+# print(t.__sizeof__())
+
+# s = '9 10 150 250 400'
+# s = s.split()
+# s = list(map(int, s))
+# print(sum(s))
+# l = list(map(int, input().split()))
+# # print(l)
+
+l = list(map(int, input().split()))
+print(l)
+
+
