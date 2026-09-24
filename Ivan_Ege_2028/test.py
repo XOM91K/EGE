@@ -60,7 +60,6 @@
 # int, str, bool, float
 
 # list, tuple, set, dict
-
 # list списки
 # l = [5, 9, 10, 15, -5, 3]
 # # Функции
