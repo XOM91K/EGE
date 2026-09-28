@@ -1,3 +1,8 @@
-import ipaddress
-ip = ipaddress.ip_network('69.121.128.142/255.255.252.0', 0)
-print(ip[-2])
+def f(x, y):
+    if x > y:
+        return 0
+    if x == y:
+        return 1
+    if x < y:
+        return f(x + 1, y) + f(x + 2, y)
+print(f(1, 11))

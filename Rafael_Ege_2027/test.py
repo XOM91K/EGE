@@ -130,11 +130,29 @@
 #     print('да есть')
 # else:
 #     print('нет')
-a = 9
-b = 'hello'
-if a % 2 == 0 and 'h' in b:
-    print('Да')
-else:
-    print('net')
-
-
+# a = 9
+# b = 'hello'
+# if a % 2 == 0 and 'h' in b:
+#     print('Да')
+# else:
+#     print('net')
+# for x in range(10, 21):
+#     print(x)
+# for x in range(1, 101):
+#     if x % 2 == 0:
+#         print(x)
+# s = 'abracadabra'
+# for x in s:
+#     print(x)
+# s = '1238721361783925321873212193263218'
+# # все четные цифры заменить на #
+# for x in '02468':
+#     s = s.replace(x, '#')
+# s = s.replace('0', '#')
+# s = s.replace('2', '#')
+# s = s.replace('4', '#')
+# s = s.replace('6', '#')
+# s = s.replace('8', '#')
+# print(s)
+for x in range(2, 101, 2):
+        print(x)
