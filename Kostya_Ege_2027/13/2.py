@@ -1,7 +1,8 @@
-import ipaddress
-ct = 0
-for x in ipaddress.ip_network('186.135.80.0/255.255.252.0', 0):
-    x = bin(int(x))[2:].zfill(32)
-    if x[:16].count('1') > x[16:].count('1'):
-        ct += 1
-print(ct)
+def f(x, y):
+    if x > y or x == 11 or x == 12:
+        return 0
+    if x == y:
+        return 1
+    if x < y:
+        return f(x + 1, y) + f(x * 2, y) + f(x ** 2, y)
+print(f(2, 10) * f(10, 40))

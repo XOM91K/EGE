@@ -108,3 +108,13 @@
 # for x in range(100, 1001):
 #     if x % 2 == 0 and x > 500:
 #         print(x)
+
+print(bin(25)[2:]) # binary bin - в 2ую
+print(oct(25)[2:]) # octal oct - в 8ую
+print(hex(25)[2:]) # hex - в 16-ую
+
+print(int('19', 16))
+print(int('31', 8))
+print(int('11001', 2))
+R = 150
+print(min(R))
