@@ -87,6 +87,13 @@
 #     print('да')
 # else:
 #     print('нет')
-s = 122102
-sm = str(s).count('1') + str(s).count('2') * 2
-print(sm)
+# s = 122102
+# sm = str(s).count('1') + str(s).count('2') * 2
+# print(sm)
+print('1 2')
+
+
+
+
+
+
