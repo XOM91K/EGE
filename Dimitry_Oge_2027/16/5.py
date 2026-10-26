@@ -10,3 +10,4 @@ if ct == 0:
     print('NO')
 else:
     print(sm / ct)
+print(int('12312', 16))

@@ -1,0 +1,8 @@
+37	61.536659	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part2-aHtETg==.enterprise3826.ru
+105	274.690289	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part5-cjR0MQ==.enterprise3826.ru
+119	344.162594	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part6-MG5fRA==.enterprise3826.ru
+121	345.876467	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part7-M3QzYw==.enterprise3826.ru
+203	604.050999	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part1-dnNvcw==.enterprise3826.ru
+241	669.338279	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part8-dDNkfQ==.enterprise3826.ru
+301	791.183751	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part4-ZjFsdA==.enterprise3826.ru
+327	913.101752	10.16.82.45	10.16.82.1	DNS	78	Standard query 0x0000 A part3-U18zeA==.enterprise3826.ru
