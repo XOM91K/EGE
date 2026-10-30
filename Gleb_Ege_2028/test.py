@@ -90,9 +90,14 @@
 # s = 122102
 # sm = str(s).count('1') + str(s).count('2') * 2
 # print(sm)
-print('1 2')
-
-
+# print('1 2')
+money = -30
+if money > 30:
+    print('да')
+elif money > 50:
+    print('da')
+elif money > 80:
+    print('da')
 
 
 
