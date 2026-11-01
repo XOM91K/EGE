@@ -91,14 +91,40 @@
 # sm = str(s).count('1') + str(s).count('2') * 2
 # print(sm)
 # print('1 2')
-money = -30
-if money > 30:
-    print('да')
-elif money > 50:
-    print('da')
-elif money > 80:
-    print('da')
-
-
-
-
+# money = -30
+# if money > 30:
+#     print('да')
+# elif money > 50:
+#     print('da')
+# elif money > 80:
+#     print('da')
+# d = 'sun'
+# print(d[1])
+# s = 'secret'
+# for x in s[::2]:
+#     print(x)
+# for x in range(0, 10, 2):
+#     print(x)
+# for x in range(100):
+#     if x > 50 and x % 7 == 0:
+#         print(x)
+# {} () []
+# lst = [5, 10, 25, -3, -4, 19]
+# for x in lst:
+#     if x % 2 == 0:
+#         print(x)
+# print(lst[2])
+# print(lst[-1])
+# lst.append(99)
+# print(lst)
+# print(sorted(lst))
+# print(sorted(lst)[::-1])
+# print(sum(lst))
+# print(max(lst))
+# print(min(lst))
+# print(len(lst))
+# print(lst[::-1])
+d = 5
+while d > 0:
+    print('Hello')
+    d -= 1
