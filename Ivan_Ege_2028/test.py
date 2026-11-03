@@ -63,58 +63,62 @@
 # list списки
 # l = [5, 9, 10, 15, -5, 3]
 # # Функции
-# print(sorted(l)[::-1])
-# print(sum(l))
-# print(min(l))
-# print(max(l))
-# print(len(l))
+# # print(sorted(l)[::-1])
+# # print(sum(l))
+# # print(min(l))
+# # print(max(l))
+# # print(len(l))
+# #
+# # # print(l[-1])
+# # # print(l[:3])
+# # print(1)
+# # print(1/0)
+# # a = 5
+# # a = 39
+# # print(a)
+# # print('2' + 2)
 #
-# # print(l[-1])
-# # print(l[:3])
-# print(1)
-# print(1/0)
-# a = 5
-# a = 39
-# print(a)
-# print('2' + 2)
+# # s = 'abracadabra'
+# # print(s[-4:]) # срезы
+# # s = 'red blue green orange'
+# # print(s.replace('e', 'G'))
+# # l = [1,2,-3, 10, 3,4,5]
+# # print(l[-2])
+# # print(max(l))
+# # print(min(l))
+# # print(sum(l))
+# # print(sorted(l)[::-1])
+# # d = 7
+# # if d % 2 == 0:
+# #     print('Четное')
+# # else:
+# #     print('Нечетное')
+# # s = 'hello world'
+# # b = 'd'
+# # if b not in s:
+# #     print('Есть')
+# # else:
+# #     print('Нет')
+# # s = 'abracadabra'
+# # print(s[2:5])
+# # for z in range(2, 9):
+# #     print('Привет')
+# # for x in 'brown':
+# #     print(x)
+# # for x in range(100, 1001):
+# #     if x % 2 == 0 and x > 500:
+# #         print(x)
+#
+# print(bin(25)[2:]) # binary bin - в 2ую
+# print(oct(25)[2:]) # octal oct - в 8ую
+# print(hex(25)[2:]) # hex - в 16-ую
+#
+# print(int('19', 16))
+# print(int('31', 8))
+# print(int('11001', 2))
+# R = 150
+# print(min(R))
 
-# s = 'abracadabra'
-# print(s[-4:]) # срезы
-# s = 'red blue green orange'
-# print(s.replace('e', 'G'))
-# l = [1,2,-3, 10, 3,4,5]
-# print(l[-2])
-# print(max(l))
-# print(min(l))
-# print(sum(l))
-# print(sorted(l)[::-1])
-# d = 7
-# if d % 2 == 0:
-#     print('Четное')
-# else:
-#     print('Нечетное')
-# s = 'hello world'
-# b = 'd'
-# if b not in s:
-#     print('Есть')
-# else:
-#     print('Нет')
-# s = 'abracadabra'
-# print(s[2:5])
-# for z in range(2, 9):
-#     print('Привет')
-# for x in 'brown':
-#     print(x)
-# for x in range(100, 1001):
-#     if x % 2 == 0 and x > 500:
-#         print(x)
 
-print(bin(25)[2:]) # binary bin - в 2ую
-print(oct(25)[2:]) # octal oct - в 8ую
-print(hex(25)[2:]) # hex - в 16-ую
-
-print(int('19', 16))
-print(int('31', 8))
-print(int('11001', 2))
-R = 150
-print(min(R))
+l = [50, -22, -23, 1, 9, 4, 8]
+print([d for d in l if d % 2 != 0])
