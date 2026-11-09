@@ -1,0 +1,4 @@
+s = list(bytes.fromhex('2d31242e2920030206007f7224652e71050602062c2020612e2504084f'))
+key = 'NEBULA2026NEBULA2026NEBULA2026NEBULA2026NEBULA2026NEBULA2026NEBULA2026'
+for x in range(len(s)):
+    print(chr(s[x] ^ ord(key[x])), end='')
